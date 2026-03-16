@@ -12,19 +12,16 @@ namespace DBProjekt
     using System;
     using System.Collections.Generic;
     
-    public partial class rollen
+    public partial class casino_spiel
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public rollen()
-        {
-            this.mitarbeiter = new HashSet<mitarbeiter>();
-        }
-    
-        public int PK_Rolle { get; set; }
+        public int PK_Spiel { get; set; }
         public string Bezeichnung { get; set; }
-        public Nullable<decimal> Gehalt { get; set; }
+        public Nullable<decimal> MinEinsatz { get; set; }
+        public Nullable<decimal> MaxEinsatz { get; set; }
+        public Nullable<System.DateTime> LetzteWartung { get; set; }
+        public string Status { get; set; }
+        public Nullable<int> FK_Raum { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<mitarbeiter> mitarbeiter { get; set; }
+        public virtual casino_raeume casino_raeume { get; set; }
     }
 }

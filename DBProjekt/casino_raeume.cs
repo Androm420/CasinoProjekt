@@ -12,27 +12,27 @@ namespace DBProjekt
     using System;
     using System.Collections.Generic;
     
-    public partial class raeume
+    public partial class casino_raeume
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public raeume()
+        public casino_raeume()
         {
-            this.kameraueberwachung = new HashSet<kameraueberwachung>();
-            this.mitarbeiter = new HashSet<mitarbeiter>();
-            this.spiel = new HashSet<spiel>();
-            this.sicherheitsvorfall = new HashSet<sicherheitsvorfall>();
+            this.casino_kameraueberwachung = new HashSet<casino_kameraueberwachung>();
+            this.casino_mitarbeiter = new HashSet<casino_mitarbeiter>();
+            this.casino_sicherheitsvorfall = new HashSet<casino_sicherheitsvorfall>();
+            this.casino_spiel = new HashSet<casino_spiel>();
         }
     
         public int PK_Raum { get; set; }
         public string Raumbezeichnung { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<kameraueberwachung> kameraueberwachung { get; set; }
+        public virtual ICollection<casino_kameraueberwachung> casino_kameraueberwachung { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<mitarbeiter> mitarbeiter { get; set; }
+        public virtual ICollection<casino_mitarbeiter> casino_mitarbeiter { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<spiel> spiel { get; set; }
+        public virtual ICollection<casino_sicherheitsvorfall> casino_sicherheitsvorfall { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<sicherheitsvorfall> sicherheitsvorfall { get; set; }
+        public virtual ICollection<casino_spiel> casino_spiel { get; set; }
     }
 }

@@ -12,12 +12,11 @@ namespace DBProjekt
 {
     public partial class Form1 : Form
     {
-        casinoEntities1 casinodaten = new casinoEntities1();
+        g5_6it23Entities CasinoDaten = new g5_6it23Entities();
         public Form1()
         {
             InitializeComponent();
-
-
+            casino_gastBindingSource.DataSource = CasinoDaten.casino_gast.ToList();
         }
 
   

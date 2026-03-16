@@ -12,20 +12,19 @@ namespace DBProjekt
     using System;
     using System.Collections.Generic;
     
-    public partial class schicht
+    public partial class casino_rollen
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public schicht()
+        public casino_rollen()
         {
-            this.mitarbeiter = new HashSet<mitarbeiter>();
+            this.casino_mitarbeiter = new HashSet<casino_mitarbeiter>();
         }
     
-        public int PK_Schicht { get; set; }
-        public Nullable<System.TimeSpan> Startzeit { get; set; }
-        public Nullable<System.TimeSpan> Endzeit { get; set; }
-        public Nullable<System.DateTime> Datum { get; set; }
+        public int PK_Rolle { get; set; }
+        public string Bezeichnung { get; set; }
+        public Nullable<decimal> Gehalt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<mitarbeiter> mitarbeiter { get; set; }
+        public virtual ICollection<casino_mitarbeiter> casino_mitarbeiter { get; set; }
     }
 }

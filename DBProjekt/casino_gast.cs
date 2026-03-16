@@ -12,13 +12,13 @@ namespace DBProjekt
     using System;
     using System.Collections.Generic;
     
-    public partial class gast
+    public partial class casino_gast
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public gast()
+        public casino_gast()
         {
-            this.sicherheitsvorfall = new HashSet<sicherheitsvorfall>();
-            this.transaktion = new HashSet<transaktion>();
+            this.casino_sicherheitsvorfall = new HashSet<casino_sicherheitsvorfall>();
+            this.casino_transaktion = new HashSet<casino_transaktion>();
         }
     
         public int PK_Gast { get; set; }
@@ -32,8 +32,8 @@ namespace DBProjekt
         public Nullable<bool> Sperrstatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<sicherheitsvorfall> sicherheitsvorfall { get; set; }
+        public virtual ICollection<casino_sicherheitsvorfall> casino_sicherheitsvorfall { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<transaktion> transaktion { get; set; }
+        public virtual ICollection<casino_transaktion> casino_transaktion { get; set; }
     }
 }

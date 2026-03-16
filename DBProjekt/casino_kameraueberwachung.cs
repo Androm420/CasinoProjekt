@@ -12,16 +12,15 @@ namespace DBProjekt
     using System;
     using System.Collections.Generic;
     
-    public partial class spiel
+    public partial class casino_kameraueberwachung
     {
-        public int PK_Spiel { get; set; }
-        public string Bezeichnung { get; set; }
-        public Nullable<decimal> MinEinsatz { get; set; }
-        public Nullable<decimal> MaxEinsatz { get; set; }
-        public Nullable<System.DateTime> LetzteWartung { get; set; }
-        public string Status { get; set; }
+        public int PK_Kameraueberwachung { get; set; }
+        public string Standort { get; set; }
+        public string Aufzeichnungsraum { get; set; }
+        public Nullable<int> Speicherdauer { get; set; }
+        public Nullable<System.TimeSpan> Uhrzeit { get; set; }
         public Nullable<int> FK_Raum { get; set; }
     
-        public virtual raeume raeume { get; set; }
+        public virtual casino_raeume casino_raeume { get; set; }
     }
 }

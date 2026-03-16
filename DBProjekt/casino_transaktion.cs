@@ -12,7 +12,7 @@ namespace DBProjekt
     using System;
     using System.Collections.Generic;
     
-    public partial class transaktion
+    public partial class casino_transaktion
     {
         public int PK_Transaktion { get; set; }
         public Nullable<int> FK_Gast { get; set; }
@@ -20,6 +20,6 @@ namespace DBProjekt
         public Nullable<System.DateTime> Zeitpunkt { get; set; }
         public string Zahlungsmittel { get; set; }
     
-        public virtual gast gast { get; set; }
+        public virtual casino_gast casino_gast { get; set; }
     }
 }

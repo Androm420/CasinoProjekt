@@ -12,13 +12,13 @@ namespace DBProjekt
     using System;
     using System.Collections.Generic;
     
-    public partial class mitarbeiter
+    public partial class casino_mitarbeiter
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public mitarbeiter()
+        public casino_mitarbeiter()
         {
-            this.sicherheitsvorfall = new HashSet<sicherheitsvorfall>();
-            this.schicht = new HashSet<schicht>();
+            this.casino_sicherheitsvorfall = new HashSet<casino_sicherheitsvorfall>();
+            this.casino_schicht = new HashSet<casino_schicht>();
         }
     
         public int PK_Mitarbeiter { get; set; }
@@ -33,11 +33,11 @@ namespace DBProjekt
         public Nullable<int> FK_Rolle { get; set; }
         public Nullable<int> FK_Raum { get; set; }
     
-        public virtual rollen rollen { get; set; }
+        public virtual casino_raeume casino_raeume { get; set; }
+        public virtual casino_rollen casino_rollen { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<sicherheitsvorfall> sicherheitsvorfall { get; set; }
-        public virtual raeume raeume { get; set; }
+        public virtual ICollection<casino_sicherheitsvorfall> casino_sicherheitsvorfall { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<schicht> schicht { get; set; }
+        public virtual ICollection<casino_schicht> casino_schicht { get; set; }
     }
 }
