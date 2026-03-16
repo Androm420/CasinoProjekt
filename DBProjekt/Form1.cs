@@ -12,7 +12,7 @@ namespace DBProjekt
 {
     public partial class Form1 : Form
     {
-        g5_6it23Entities CasinoDaten = new g5_6it23Entities();
+        g5_6it23Entities1 CasinoDaten = new g5_6it23Entities1();
         public Form1()
         {
             InitializeComponent();

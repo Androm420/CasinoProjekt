@@ -510,7 +510,7 @@
           <End Role="casino_mitarbeiter" Type="Self.casino_mitarbeiter" Multiplicity="*" />
           <End Role="casino_schicht" Type="Self.casino_schicht" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="g5_6it23Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="g5_6it23Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="casino_gast" EntityType="Self.casino_gast" />
           <EntitySet Name="casino_kameraueberwachung" EntityType="Self.casino_kameraueberwachung" />
           <EntitySet Name="casino_mitarbeiter" EntityType="Self.casino_mitarbeiter" />
@@ -562,7 +562,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="g5_6it23ModelStoreContainer" CdmEntityContainer="g5_6it23Entities">
+        <EntityContainerMapping StorageEntityContainer="g5_6it23ModelStoreContainer" CdmEntityContainer="g5_6it23Entities1">
           <EntitySetMapping Name="casino_gast">
             <EntityTypeMapping TypeName="g5_6it23Model.casino_gast">
               <MappingFragment StoreEntitySet="casino_gast">

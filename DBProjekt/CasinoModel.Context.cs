@@ -13,10 +13,10 @@ namespace DBProjekt
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class g5_6it23Entities : DbContext
+    public partial class g5_6it23Entities1 : DbContext
     {
-        public g5_6it23Entities()
-            : base("name=g5_6it23Entities")
+        public g5_6it23Entities1()
+            : base("name=g5_6it23Entities1")
         {
         }
     
