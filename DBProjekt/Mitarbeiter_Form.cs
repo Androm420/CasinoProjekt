@@ -17,12 +17,21 @@ namespace DBProjekt
         public Mitarbeiter_Form()
         {
             InitializeComponent();
-            casino_mitarbeiterBindingSource.DataSource = CasinoDaten.casino_mitarbeiter.ToList(); 
+            casino_mitarbeiterBindingSource.DataSource = CasinoDaten.casino_mitarbeiter.ToList();
+            comboBox1.DataSource = CasinoDaten.casino_rollen.ToList();
+            comboBox1.DisplayMember = "Bezeichnung";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            casino_mitarbeiterBindingSource.EndEdit();
             CasinoDaten.SaveChanges();
+        }
+        //filter nach rollen
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var query = CasinoDaten.casino_mitarbeiter.Where(a => a.FK_Rolle == comboBox1.SelectedIndex+1).ToList();
+            casino_mitarbeiterBindingSource.DataSource = query;
         }
     }
 }
