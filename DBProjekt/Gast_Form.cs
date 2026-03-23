@@ -18,21 +18,15 @@ namespace DBProjekt
         {
             InitializeComponent();
             casino_gastBindingSource.DataSource = CasinoDaten.casino_gast.ToList();
-            foreach (var item in CasinoDaten.casino_gast.ToList())
-            {
-                if (item.Sperrstatus == true)
-                {
+            
                     sperrstatusCheckBox.Text = "Gesperrt";
-                }
-                if (item.VIP == true)
-                {
                     vIPCheckBox.Text = "VIP";
-                }
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            casino_gastBindingSource.EndEdit();
             CasinoDaten.SaveChanges();
         }
 
