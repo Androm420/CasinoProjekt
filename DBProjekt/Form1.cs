@@ -44,5 +44,11 @@ namespace DBProjekt
             Schichten form = new Schichten();
             form.Show();
         }
+
+        private void Spiele_Click(object sender, EventArgs e)
+        {
+            Spiele form = new Spiele();
+            form.Show();
+        }
     }
 }

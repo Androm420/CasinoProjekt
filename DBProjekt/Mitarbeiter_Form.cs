@@ -18,8 +18,12 @@ namespace DBProjekt
         {
             InitializeComponent();
             casino_mitarbeiterBindingSource.DataSource = CasinoDaten.casino_mitarbeiter.ToList();
+            Raum.DataSource = CasinoDaten.casino_raeume.ToList();
             comboBox1.DataSource = CasinoDaten.casino_rollen.ToList();
             comboBox1.DisplayMember = "Bezeichnung";
+            comboBox1.ValueMember = "PK_Rolle";
+            Raum.ValueMember = "PK_Raum";
+            Raum.DisplayMember = "Raumbezeichnung";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,6 +36,17 @@ namespace DBProjekt
         {
             var query = CasinoDaten.casino_mitarbeiter.Where(a => a.FK_Rolle == comboBox1.SelectedIndex+1).ToList();
             casino_mitarbeiterBindingSource.DataSource = query;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var current = casino_mitarbeiterBindingSource.Current as casino_mitarbeiter;
+            current.FK_Rolle = (int)comboBox1.SelectedValue;
+            current.FK_Raum = (int)Raum.SelectedValue;
+            casino_mitarbeiterBindingSource.EndEdit();
+            CasinoDaten.casino_mitarbeiter.Add(current);
+            casino_mitarbeiterBindingSource.ResetBindings(false);
+            CasinoDaten.SaveChanges();
         }
     }
 }
