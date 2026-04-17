@@ -120,6 +120,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raume_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raume_Form.Designer.cs">
+      <DependentUpon>Raume_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Schichten.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Raume_Form.resx">
+      <DependentUpon>Raume_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schichten.resx">
       <DependentUpon>Schichten.cs</DependentUpon>
     </EmbeddedResource>
