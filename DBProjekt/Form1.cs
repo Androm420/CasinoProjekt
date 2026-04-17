@@ -45,9 +45,15 @@ namespace DBProjekt
             form.Show();
         }
 
+        private void Spiele_Click(object sender, EventArgs e)
+        {
+            Spiele form = new Spiele();
+            form.Show();
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
-            Raume_Form form = new Raume_Form();
+            Rollen form = new Rollen();
             form.Show();
         }
     }

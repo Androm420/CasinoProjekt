@@ -26,7 +26,10 @@ namespace DBProjekt
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var current = casino_gastBindingSource.Current as casino_gast;
             casino_gastBindingSource.EndEdit();
+            CasinoDaten.casino_gast.Add(current);
+            casino_gastBindingSource.ResetBindings(false);
             CasinoDaten.SaveChanges();
         }
 

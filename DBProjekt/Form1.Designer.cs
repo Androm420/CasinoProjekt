@@ -34,8 +34,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Spiele = new System.Windows.Forms.Button();
             this.casino_gastBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,27 +94,39 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // Spiele
             // 
-            this.button5.Location = new System.Drawing.Point(190, 231);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 41);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "Räume";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Spiele.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Spiele.Location = new System.Drawing.Point(178, 231);
+            this.Spiele.Name = "Spiele";
+            this.Spiele.Size = new System.Drawing.Size(128, 51);
+            this.Spiele.TabIndex = 25;
+            this.Spiele.Text = "Spiele";
+            this.Spiele.UseVisualStyleBackColor = true;
+            this.Spiele.Click += new System.EventHandler(this.Spiele_Click);
             // 
             // casino_gastBindingSource
             // 
             this.casino_gastBindingSource.DataSource = typeof(DBProjekt.casino_gast);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(331, 248);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(691, 533);
+            this.ClientSize = new System.Drawing.Size(598, 494);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.Spiele);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -135,6 +148,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Spiele;
         private System.Windows.Forms.Button button5;
     }
 }
