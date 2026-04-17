@@ -48,5 +48,17 @@ namespace DBProjekt
             casino_mitarbeiterBindingSource.ResetBindings(false);
             CasinoDaten.SaveChanges();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var current_gast = casino_mitarbeiterBindingSource.Current as casino_mitarbeiter;
+            var confirm_msg = MessageBox.Show("Mitarbeiter: " + current_gast.Name + " Löschen?", "Wirklich Löschen?", MessageBoxButtons.YesNo);
+            if (confirm_msg == DialogResult.Yes)
+            {
+                CasinoDaten.casino_mitarbeiter.Remove(current_gast);
+                CasinoDaten.SaveChanges();
+                casino_mitarbeiterBindingSource.ResetBindings(false);
+            }
+        }
     }
 }

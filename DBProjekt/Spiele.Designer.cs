@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Spiele));
             System.Windows.Forms.Label bezeichnungLabel;
             System.Windows.Forms.Label fK_RaumLabel;
             System.Windows.Forms.Label letzteWartungLabel;
@@ -39,18 +38,20 @@
             System.Windows.Forms.Label statusLabel;
             System.Windows.Forms.Label raumbezeichnungLabel;
             System.Windows.Forms.Label pK_RaumLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Spiele));
             this.casino_spielBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.casino_spielBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.casino_spielBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.bezeichnungTextBox = new System.Windows.Forms.TextBox();
             this.fK_RaumTextBox = new System.Windows.Forms.TextBox();
@@ -63,8 +64,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pK_RaumTextBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.casino_spielBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             bezeichnungLabel = new System.Windows.Forms.Label();
             fK_RaumLabel = new System.Windows.Forms.Label();
             letzteWartungLabel = new System.Windows.Forms.Label();
@@ -78,6 +79,87 @@
             this.casino_spielBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.casino_spielBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bezeichnungLabel
+            // 
+            bezeichnungLabel.AutoSize = true;
+            bezeichnungLabel.Location = new System.Drawing.Point(12, 30);
+            bezeichnungLabel.Name = "bezeichnungLabel";
+            bezeichnungLabel.Size = new System.Drawing.Size(72, 13);
+            bezeichnungLabel.TabIndex = 1;
+            bezeichnungLabel.Text = "Bezeichnung:";
+            // 
+            // fK_RaumLabel
+            // 
+            fK_RaumLabel.AutoSize = true;
+            fK_RaumLabel.Location = new System.Drawing.Point(12, 56);
+            fK_RaumLabel.Name = "fK_RaumLabel";
+            fK_RaumLabel.Size = new System.Drawing.Size(54, 13);
+            fK_RaumLabel.TabIndex = 3;
+            fK_RaumLabel.Text = "FK Raum:";
+            // 
+            // letzteWartungLabel
+            // 
+            letzteWartungLabel.AutoSize = true;
+            letzteWartungLabel.Location = new System.Drawing.Point(12, 83);
+            letzteWartungLabel.Name = "letzteWartungLabel";
+            letzteWartungLabel.Size = new System.Drawing.Size(83, 13);
+            letzteWartungLabel.TabIndex = 5;
+            letzteWartungLabel.Text = "Letzte Wartung:";
+            // 
+            // maxEinsatzLabel
+            // 
+            maxEinsatzLabel.AutoSize = true;
+            maxEinsatzLabel.Location = new System.Drawing.Point(12, 108);
+            maxEinsatzLabel.Name = "maxEinsatzLabel";
+            maxEinsatzLabel.Size = new System.Drawing.Size(67, 13);
+            maxEinsatzLabel.TabIndex = 7;
+            maxEinsatzLabel.Text = "Max Einsatz:";
+            // 
+            // minEinsatzLabel
+            // 
+            minEinsatzLabel.AutoSize = true;
+            minEinsatzLabel.Location = new System.Drawing.Point(12, 134);
+            minEinsatzLabel.Name = "minEinsatzLabel";
+            minEinsatzLabel.Size = new System.Drawing.Size(64, 13);
+            minEinsatzLabel.TabIndex = 9;
+            minEinsatzLabel.Text = "Min Einsatz:";
+            // 
+            // pK_SpielLabel
+            // 
+            pK_SpielLabel.AutoSize = true;
+            pK_SpielLabel.Location = new System.Drawing.Point(12, 160);
+            pK_SpielLabel.Name = "pK_SpielLabel";
+            pK_SpielLabel.Size = new System.Drawing.Size(50, 13);
+            pK_SpielLabel.TabIndex = 11;
+            pK_SpielLabel.Text = "PK Spiel:";
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new System.Drawing.Point(12, 186);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(40, 13);
+            statusLabel.TabIndex = 13;
+            statusLabel.Text = "Status:";
+            // 
+            // raumbezeichnungLabel
+            // 
+            raumbezeichnungLabel.AutoSize = true;
+            raumbezeichnungLabel.Location = new System.Drawing.Point(12, 272);
+            raumbezeichnungLabel.Name = "raumbezeichnungLabel";
+            raumbezeichnungLabel.Size = new System.Drawing.Size(99, 13);
+            raumbezeichnungLabel.TabIndex = 17;
+            raumbezeichnungLabel.Text = "Raumbezeichnung:";
+            // 
+            // pK_RaumLabel
+            // 
+            pK_RaumLabel.AutoSize = true;
+            pK_RaumLabel.Location = new System.Drawing.Point(12, 246);
+            pK_RaumLabel.Name = "pK_RaumLabel";
+            pK_RaumLabel.Size = new System.Drawing.Size(55, 13);
+            pK_RaumLabel.TabIndex = 15;
+            pK_RaumLabel.Text = "PK Raum:";
             // 
             // casino_spielBindingNavigator
             // 
@@ -108,6 +190,35 @@
             this.casino_spielBindingNavigator.Size = new System.Drawing.Size(800, 25);
             this.casino_spielBindingNavigator.TabIndex = 0;
             this.casino_spielBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Neu hinzufügen";
+            // 
+            // casino_spielBindingSource
+            // 
+            this.casino_spielBindingSource.DataSource = typeof(DBProjekt.casino_spiel);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(44, 22);
+            this.bindingNavigatorCountItem.Text = "von {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Löschen";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -142,16 +253,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Aktuelle Position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(44, 22);
-            this.bindingNavigatorCountItem.Text = "von {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Die Gesamtanzahl der Elemente.";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -174,26 +278,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Neu hinzufügen";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Löschen";
             // 
             // casino_spielBindingNavigatorSaveItem
             // 
@@ -204,15 +290,6 @@
             this.casino_spielBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.casino_spielBindingNavigatorSaveItem.Text = "Daten speichern";
             // 
-            // bezeichnungLabel
-            // 
-            bezeichnungLabel.AutoSize = true;
-            bezeichnungLabel.Location = new System.Drawing.Point(12, 30);
-            bezeichnungLabel.Name = "bezeichnungLabel";
-            bezeichnungLabel.Size = new System.Drawing.Size(72, 13);
-            bezeichnungLabel.TabIndex = 1;
-            bezeichnungLabel.Text = "Bezeichnung:";
-            // 
             // bezeichnungTextBox
             // 
             this.bezeichnungTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_spielBindingSource, "Bezeichnung", true));
@@ -220,15 +297,6 @@
             this.bezeichnungTextBox.Name = "bezeichnungTextBox";
             this.bezeichnungTextBox.Size = new System.Drawing.Size(200, 20);
             this.bezeichnungTextBox.TabIndex = 2;
-            // 
-            // fK_RaumLabel
-            // 
-            fK_RaumLabel.AutoSize = true;
-            fK_RaumLabel.Location = new System.Drawing.Point(12, 56);
-            fK_RaumLabel.Name = "fK_RaumLabel";
-            fK_RaumLabel.Size = new System.Drawing.Size(54, 13);
-            fK_RaumLabel.TabIndex = 3;
-            fK_RaumLabel.Text = "FK Raum:";
             // 
             // fK_RaumTextBox
             // 
@@ -239,15 +307,6 @@
             this.fK_RaumTextBox.Size = new System.Drawing.Size(200, 20);
             this.fK_RaumTextBox.TabIndex = 4;
             // 
-            // letzteWartungLabel
-            // 
-            letzteWartungLabel.AutoSize = true;
-            letzteWartungLabel.Location = new System.Drawing.Point(12, 83);
-            letzteWartungLabel.Name = "letzteWartungLabel";
-            letzteWartungLabel.Size = new System.Drawing.Size(83, 13);
-            letzteWartungLabel.TabIndex = 5;
-            letzteWartungLabel.Text = "Letzte Wartung:";
-            // 
             // letzteWartungDateTimePicker
             // 
             this.letzteWartungDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.casino_spielBindingSource, "LetzteWartung", true));
@@ -255,15 +314,6 @@
             this.letzteWartungDateTimePicker.Name = "letzteWartungDateTimePicker";
             this.letzteWartungDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.letzteWartungDateTimePicker.TabIndex = 6;
-            // 
-            // maxEinsatzLabel
-            // 
-            maxEinsatzLabel.AutoSize = true;
-            maxEinsatzLabel.Location = new System.Drawing.Point(12, 108);
-            maxEinsatzLabel.Name = "maxEinsatzLabel";
-            maxEinsatzLabel.Size = new System.Drawing.Size(67, 13);
-            maxEinsatzLabel.TabIndex = 7;
-            maxEinsatzLabel.Text = "Max Einsatz:";
             // 
             // maxEinsatzTextBox
             // 
@@ -273,15 +323,6 @@
             this.maxEinsatzTextBox.Size = new System.Drawing.Size(200, 20);
             this.maxEinsatzTextBox.TabIndex = 8;
             // 
-            // minEinsatzLabel
-            // 
-            minEinsatzLabel.AutoSize = true;
-            minEinsatzLabel.Location = new System.Drawing.Point(12, 134);
-            minEinsatzLabel.Name = "minEinsatzLabel";
-            minEinsatzLabel.Size = new System.Drawing.Size(64, 13);
-            minEinsatzLabel.TabIndex = 9;
-            minEinsatzLabel.Text = "Min Einsatz:";
-            // 
             // minEinsatzTextBox
             // 
             this.minEinsatzTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_spielBindingSource, "MinEinsatz", true));
@@ -289,15 +330,6 @@
             this.minEinsatzTextBox.Name = "minEinsatzTextBox";
             this.minEinsatzTextBox.Size = new System.Drawing.Size(200, 20);
             this.minEinsatzTextBox.TabIndex = 10;
-            // 
-            // pK_SpielLabel
-            // 
-            pK_SpielLabel.AutoSize = true;
-            pK_SpielLabel.Location = new System.Drawing.Point(12, 160);
-            pK_SpielLabel.Name = "pK_SpielLabel";
-            pK_SpielLabel.Size = new System.Drawing.Size(50, 13);
-            pK_SpielLabel.TabIndex = 11;
-            pK_SpielLabel.Text = "PK Spiel:";
             // 
             // pK_SpielTextBox
             // 
@@ -307,15 +339,6 @@
             this.pK_SpielTextBox.Size = new System.Drawing.Size(200, 20);
             this.pK_SpielTextBox.TabIndex = 12;
             // 
-            // statusLabel
-            // 
-            statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(12, 186);
-            statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(40, 13);
-            statusLabel.TabIndex = 13;
-            statusLabel.Text = "Status:";
-            // 
             // statusTextBox
             // 
             this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_spielBindingSource, "Status", true));
@@ -323,15 +346,6 @@
             this.statusTextBox.Name = "statusTextBox";
             this.statusTextBox.Size = new System.Drawing.Size(200, 20);
             this.statusTextBox.TabIndex = 14;
-            // 
-            // raumbezeichnungLabel
-            // 
-            raumbezeichnungLabel.AutoSize = true;
-            raumbezeichnungLabel.Location = new System.Drawing.Point(12, 272);
-            raumbezeichnungLabel.Name = "raumbezeichnungLabel";
-            raumbezeichnungLabel.Size = new System.Drawing.Size(99, 13);
-            raumbezeichnungLabel.TabIndex = 17;
-            raumbezeichnungLabel.Text = "Raumbezeichnung:";
             // 
             // raumbezeichnungTextBox
             // 
@@ -361,15 +375,6 @@
             this.pK_RaumTextBox.Size = new System.Drawing.Size(100, 20);
             this.pK_RaumTextBox.TabIndex = 16;
             // 
-            // pK_RaumLabel
-            // 
-            pK_RaumLabel.AutoSize = true;
-            pK_RaumLabel.Location = new System.Drawing.Point(12, 246);
-            pK_RaumLabel.Name = "pK_RaumLabel";
-            pK_RaumLabel.Size = new System.Drawing.Size(55, 13);
-            pK_RaumLabel.TabIndex = 15;
-            pK_RaumLabel.Text = "PK Raum:";
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -377,10 +382,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 20;
-            // 
-            // casino_spielBindingSource
-            // 
-            this.casino_spielBindingSource.DataSource = typeof(DBProjekt.casino_spiel);
             // 
             // button2
             // 
@@ -392,11 +393,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(456, 358);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Spiele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
@@ -459,5 +471,6 @@
         private System.Windows.Forms.TextBox pK_RaumTextBox;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -38,7 +38,6 @@
             System.Windows.Forms.Label sperrstatusLabel;
             System.Windows.Forms.Label vIPLabel;
             System.Windows.Forms.Label vornameLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gast_Form));
             System.Windows.Forms.Label betragLabel;
             System.Windows.Forms.Label fK_GastLabel;
             System.Windows.Forms.Label pK_TransaktionLabel;
@@ -53,8 +52,10 @@
             System.Windows.Forms.Label sperrstatusLabel1;
             System.Windows.Forms.Label vIPLabel1;
             System.Windows.Forms.Label vornameLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gast_Form));
             this.casino_gastBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.casino_gastBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -81,6 +82,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.betragTextBox = new System.Windows.Forms.TextBox();
+            this.casino_transaktionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fK_GastTextBox = new System.Windows.Forms.TextBox();
             this.pK_TransaktionTextBox = new System.Windows.Forms.TextBox();
             this.zahlungsmittelTextBox = new System.Windows.Forms.TextBox();
@@ -95,19 +97,19 @@
             this.vIPCheckBox1 = new System.Windows.Forms.CheckBox();
             this.vornameTextBox1 = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
-            this.casino_transaktionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.casino_gastBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             adresseLabel = new System.Windows.Forms.Label();
             ausweisnummerLabel = new System.Windows.Forms.Label();
             geburtsdatumLabel = new System.Windows.Forms.Label();
@@ -133,10 +135,10 @@
             vornameLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingNavigator)).BeginInit();
             this.casino_gastBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_transaktionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_transaktionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // adresseLabel
@@ -220,6 +222,132 @@
             vornameLabel.TabIndex = 17;
             vornameLabel.Text = "Vorname:";
             // 
+            // betragLabel
+            // 
+            betragLabel.AutoSize = true;
+            betragLabel.Location = new System.Drawing.Point(824, 128);
+            betragLabel.Name = "betragLabel";
+            betragLabel.Size = new System.Drawing.Size(41, 13);
+            betragLabel.TabIndex = 24;
+            betragLabel.Text = "Betrag:";
+            // 
+            // fK_GastLabel
+            // 
+            fK_GastLabel.AutoSize = true;
+            fK_GastLabel.Location = new System.Drawing.Point(824, 154);
+            fK_GastLabel.Name = "fK_GastLabel";
+            fK_GastLabel.Size = new System.Drawing.Size(48, 13);
+            fK_GastLabel.TabIndex = 26;
+            fK_GastLabel.Text = "FK Gast:";
+            // 
+            // pK_TransaktionLabel
+            // 
+            pK_TransaktionLabel.AutoSize = true;
+            pK_TransaktionLabel.Location = new System.Drawing.Point(824, 180);
+            pK_TransaktionLabel.Name = "pK_TransaktionLabel";
+            pK_TransaktionLabel.Size = new System.Drawing.Size(83, 13);
+            pK_TransaktionLabel.TabIndex = 28;
+            pK_TransaktionLabel.Text = "PK Transaktion:";
+            // 
+            // zahlungsmittelLabel
+            // 
+            zahlungsmittelLabel.AutoSize = true;
+            zahlungsmittelLabel.Location = new System.Drawing.Point(824, 206);
+            zahlungsmittelLabel.Name = "zahlungsmittelLabel";
+            zahlungsmittelLabel.Size = new System.Drawing.Size(78, 13);
+            zahlungsmittelLabel.TabIndex = 30;
+            zahlungsmittelLabel.Text = "Zahlungsmittel:";
+            // 
+            // zeitpunktLabel
+            // 
+            zeitpunktLabel.AutoSize = true;
+            zeitpunktLabel.Location = new System.Drawing.Point(824, 233);
+            zeitpunktLabel.Name = "zeitpunktLabel";
+            zeitpunktLabel.Size = new System.Drawing.Size(55, 13);
+            zeitpunktLabel.TabIndex = 32;
+            zeitpunktLabel.Text = "Zeitpunkt:";
+            // 
+            // adresseLabel1
+            // 
+            adresseLabel1.AutoSize = true;
+            adresseLabel1.Location = new System.Drawing.Point(824, 292);
+            adresseLabel1.Name = "adresseLabel1";
+            adresseLabel1.Size = new System.Drawing.Size(48, 13);
+            adresseLabel1.TabIndex = 34;
+            adresseLabel1.Text = "Adresse:";
+            // 
+            // ausweisnummerLabel1
+            // 
+            ausweisnummerLabel1.AutoSize = true;
+            ausweisnummerLabel1.Location = new System.Drawing.Point(824, 318);
+            ausweisnummerLabel1.Name = "ausweisnummerLabel1";
+            ausweisnummerLabel1.Size = new System.Drawing.Size(86, 13);
+            ausweisnummerLabel1.TabIndex = 36;
+            ausweisnummerLabel1.Text = "Ausweisnummer:";
+            // 
+            // geburtsdatumLabel1
+            // 
+            geburtsdatumLabel1.AutoSize = true;
+            geburtsdatumLabel1.Location = new System.Drawing.Point(824, 345);
+            geburtsdatumLabel1.Name = "geburtsdatumLabel1";
+            geburtsdatumLabel1.Size = new System.Drawing.Size(76, 13);
+            geburtsdatumLabel1.TabIndex = 38;
+            geburtsdatumLabel1.Text = "Geburtsdatum:";
+            // 
+            // nachnameLabel1
+            // 
+            nachnameLabel1.AutoSize = true;
+            nachnameLabel1.Location = new System.Drawing.Point(824, 370);
+            nachnameLabel1.Name = "nachnameLabel1";
+            nachnameLabel1.Size = new System.Drawing.Size(62, 13);
+            nachnameLabel1.TabIndex = 40;
+            nachnameLabel1.Text = "Nachname:";
+            // 
+            // pK_GastLabel1
+            // 
+            pK_GastLabel1.AutoSize = true;
+            pK_GastLabel1.Location = new System.Drawing.Point(824, 396);
+            pK_GastLabel1.Name = "pK_GastLabel1";
+            pK_GastLabel1.Size = new System.Drawing.Size(49, 13);
+            pK_GastLabel1.TabIndex = 42;
+            pK_GastLabel1.Text = "PK Gast:";
+            // 
+            // registrierungsdatumLabel1
+            // 
+            registrierungsdatumLabel1.AutoSize = true;
+            registrierungsdatumLabel1.Location = new System.Drawing.Point(824, 423);
+            registrierungsdatumLabel1.Name = "registrierungsdatumLabel1";
+            registrierungsdatumLabel1.Size = new System.Drawing.Size(106, 13);
+            registrierungsdatumLabel1.TabIndex = 44;
+            registrierungsdatumLabel1.Text = "Registrierungsdatum:";
+            // 
+            // sperrstatusLabel1
+            // 
+            sperrstatusLabel1.AutoSize = true;
+            sperrstatusLabel1.Location = new System.Drawing.Point(824, 450);
+            sperrstatusLabel1.Name = "sperrstatusLabel1";
+            sperrstatusLabel1.Size = new System.Drawing.Size(63, 13);
+            sperrstatusLabel1.TabIndex = 46;
+            sperrstatusLabel1.Text = "Sperrstatus:";
+            // 
+            // vIPLabel1
+            // 
+            vIPLabel1.AutoSize = true;
+            vIPLabel1.Location = new System.Drawing.Point(824, 480);
+            vIPLabel1.Name = "vIPLabel1";
+            vIPLabel1.Size = new System.Drawing.Size(27, 13);
+            vIPLabel1.TabIndex = 48;
+            vIPLabel1.Text = "VIP:";
+            // 
+            // vornameLabel1
+            // 
+            vornameLabel1.AutoSize = true;
+            vornameLabel1.Location = new System.Drawing.Point(824, 508);
+            vornameLabel1.Name = "vornameLabel1";
+            vornameLabel1.Size = new System.Drawing.Size(52, 13);
+            vornameLabel1.TabIndex = 50;
+            vornameLabel1.Text = "Vorname:";
+            // 
             // casino_gastBindingNavigator
             // 
             this.casino_gastBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -258,6 +386,11 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Neu hinzufügen";
+            // 
+            // casino_gastBindingSource
+            // 
+            this.casino_gastBindingSource.DataSource = typeof(DBProjekt.casino_gast);
+            this.casino_gastBindingSource.CurrentChanged += new System.EventHandler(this.casino_gastBindingSource_CurrentChanged);
             // 
             // bindingNavigatorCountItem
             // 
@@ -468,15 +601,6 @@
             this.dateTimePicker1.TabIndex = 23;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // betragLabel
-            // 
-            betragLabel.AutoSize = true;
-            betragLabel.Location = new System.Drawing.Point(824, 128);
-            betragLabel.Name = "betragLabel";
-            betragLabel.Size = new System.Drawing.Size(41, 13);
-            betragLabel.TabIndex = 24;
-            betragLabel.Text = "Betrag:";
-            // 
             // betragTextBox
             // 
             this.betragTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_transaktionBindingSource, "Betrag", true));
@@ -485,14 +609,9 @@
             this.betragTextBox.Size = new System.Drawing.Size(200, 20);
             this.betragTextBox.TabIndex = 25;
             // 
-            // fK_GastLabel
+            // casino_transaktionBindingSource
             // 
-            fK_GastLabel.AutoSize = true;
-            fK_GastLabel.Location = new System.Drawing.Point(824, 154);
-            fK_GastLabel.Name = "fK_GastLabel";
-            fK_GastLabel.Size = new System.Drawing.Size(48, 13);
-            fK_GastLabel.TabIndex = 26;
-            fK_GastLabel.Text = "FK Gast:";
+            this.casino_transaktionBindingSource.DataSource = typeof(DBProjekt.casino_transaktion);
             // 
             // fK_GastTextBox
             // 
@@ -502,15 +621,6 @@
             this.fK_GastTextBox.Size = new System.Drawing.Size(200, 20);
             this.fK_GastTextBox.TabIndex = 27;
             // 
-            // pK_TransaktionLabel
-            // 
-            pK_TransaktionLabel.AutoSize = true;
-            pK_TransaktionLabel.Location = new System.Drawing.Point(824, 180);
-            pK_TransaktionLabel.Name = "pK_TransaktionLabel";
-            pK_TransaktionLabel.Size = new System.Drawing.Size(83, 13);
-            pK_TransaktionLabel.TabIndex = 28;
-            pK_TransaktionLabel.Text = "PK Transaktion:";
-            // 
             // pK_TransaktionTextBox
             // 
             this.pK_TransaktionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_transaktionBindingSource, "PK_Transaktion", true));
@@ -518,15 +628,6 @@
             this.pK_TransaktionTextBox.Name = "pK_TransaktionTextBox";
             this.pK_TransaktionTextBox.Size = new System.Drawing.Size(200, 20);
             this.pK_TransaktionTextBox.TabIndex = 29;
-            // 
-            // zahlungsmittelLabel
-            // 
-            zahlungsmittelLabel.AutoSize = true;
-            zahlungsmittelLabel.Location = new System.Drawing.Point(824, 206);
-            zahlungsmittelLabel.Name = "zahlungsmittelLabel";
-            zahlungsmittelLabel.Size = new System.Drawing.Size(78, 13);
-            zahlungsmittelLabel.TabIndex = 30;
-            zahlungsmittelLabel.Text = "Zahlungsmittel:";
             // 
             // zahlungsmittelTextBox
             // 
@@ -536,15 +637,6 @@
             this.zahlungsmittelTextBox.Size = new System.Drawing.Size(200, 20);
             this.zahlungsmittelTextBox.TabIndex = 31;
             // 
-            // zeitpunktLabel
-            // 
-            zeitpunktLabel.AutoSize = true;
-            zeitpunktLabel.Location = new System.Drawing.Point(824, 233);
-            zeitpunktLabel.Name = "zeitpunktLabel";
-            zeitpunktLabel.Size = new System.Drawing.Size(55, 13);
-            zeitpunktLabel.TabIndex = 32;
-            zeitpunktLabel.Text = "Zeitpunkt:";
-            // 
             // zeitpunktDateTimePicker
             // 
             this.zeitpunktDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.casino_transaktionBindingSource, "Zeitpunkt", true));
@@ -552,15 +644,6 @@
             this.zeitpunktDateTimePicker.Name = "zeitpunktDateTimePicker";
             this.zeitpunktDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.zeitpunktDateTimePicker.TabIndex = 33;
-            // 
-            // adresseLabel1
-            // 
-            adresseLabel1.AutoSize = true;
-            adresseLabel1.Location = new System.Drawing.Point(824, 292);
-            adresseLabel1.Name = "adresseLabel1";
-            adresseLabel1.Size = new System.Drawing.Size(48, 13);
-            adresseLabel1.TabIndex = 34;
-            adresseLabel1.Text = "Adresse:";
             // 
             // adresseTextBox1
             // 
@@ -570,15 +653,6 @@
             this.adresseTextBox1.Size = new System.Drawing.Size(200, 20);
             this.adresseTextBox1.TabIndex = 35;
             // 
-            // ausweisnummerLabel1
-            // 
-            ausweisnummerLabel1.AutoSize = true;
-            ausweisnummerLabel1.Location = new System.Drawing.Point(824, 318);
-            ausweisnummerLabel1.Name = "ausweisnummerLabel1";
-            ausweisnummerLabel1.Size = new System.Drawing.Size(86, 13);
-            ausweisnummerLabel1.TabIndex = 36;
-            ausweisnummerLabel1.Text = "Ausweisnummer:";
-            // 
             // ausweisnummerTextBox1
             // 
             this.ausweisnummerTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_transaktionBindingSource, "casino_gast.Ausweisnummer", true));
@@ -586,15 +660,6 @@
             this.ausweisnummerTextBox1.Name = "ausweisnummerTextBox1";
             this.ausweisnummerTextBox1.Size = new System.Drawing.Size(200, 20);
             this.ausweisnummerTextBox1.TabIndex = 37;
-            // 
-            // geburtsdatumLabel1
-            // 
-            geburtsdatumLabel1.AutoSize = true;
-            geburtsdatumLabel1.Location = new System.Drawing.Point(824, 345);
-            geburtsdatumLabel1.Name = "geburtsdatumLabel1";
-            geburtsdatumLabel1.Size = new System.Drawing.Size(76, 13);
-            geburtsdatumLabel1.TabIndex = 38;
-            geburtsdatumLabel1.Text = "Geburtsdatum:";
             // 
             // geburtsdatumDateTimePicker1
             // 
@@ -604,15 +669,6 @@
             this.geburtsdatumDateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.geburtsdatumDateTimePicker1.TabIndex = 39;
             // 
-            // nachnameLabel1
-            // 
-            nachnameLabel1.AutoSize = true;
-            nachnameLabel1.Location = new System.Drawing.Point(824, 370);
-            nachnameLabel1.Name = "nachnameLabel1";
-            nachnameLabel1.Size = new System.Drawing.Size(62, 13);
-            nachnameLabel1.TabIndex = 40;
-            nachnameLabel1.Text = "Nachname:";
-            // 
             // nachnameTextBox1
             // 
             this.nachnameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_transaktionBindingSource, "casino_gast.Nachname", true));
@@ -620,15 +676,6 @@
             this.nachnameTextBox1.Name = "nachnameTextBox1";
             this.nachnameTextBox1.Size = new System.Drawing.Size(200, 20);
             this.nachnameTextBox1.TabIndex = 41;
-            // 
-            // pK_GastLabel1
-            // 
-            pK_GastLabel1.AutoSize = true;
-            pK_GastLabel1.Location = new System.Drawing.Point(824, 396);
-            pK_GastLabel1.Name = "pK_GastLabel1";
-            pK_GastLabel1.Size = new System.Drawing.Size(49, 13);
-            pK_GastLabel1.TabIndex = 42;
-            pK_GastLabel1.Text = "PK Gast:";
             // 
             // pK_GastTextBox1
             // 
@@ -638,15 +685,6 @@
             this.pK_GastTextBox1.Size = new System.Drawing.Size(200, 20);
             this.pK_GastTextBox1.TabIndex = 43;
             // 
-            // registrierungsdatumLabel1
-            // 
-            registrierungsdatumLabel1.AutoSize = true;
-            registrierungsdatumLabel1.Location = new System.Drawing.Point(824, 423);
-            registrierungsdatumLabel1.Name = "registrierungsdatumLabel1";
-            registrierungsdatumLabel1.Size = new System.Drawing.Size(106, 13);
-            registrierungsdatumLabel1.TabIndex = 44;
-            registrierungsdatumLabel1.Text = "Registrierungsdatum:";
-            // 
             // registrierungsdatumDateTimePicker1
             // 
             this.registrierungsdatumDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.casino_transaktionBindingSource, "casino_gast.Registrierungsdatum", true));
@@ -654,15 +692,6 @@
             this.registrierungsdatumDateTimePicker1.Name = "registrierungsdatumDateTimePicker1";
             this.registrierungsdatumDateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.registrierungsdatumDateTimePicker1.TabIndex = 45;
-            // 
-            // sperrstatusLabel1
-            // 
-            sperrstatusLabel1.AutoSize = true;
-            sperrstatusLabel1.Location = new System.Drawing.Point(824, 450);
-            sperrstatusLabel1.Name = "sperrstatusLabel1";
-            sperrstatusLabel1.Size = new System.Drawing.Size(63, 13);
-            sperrstatusLabel1.TabIndex = 46;
-            sperrstatusLabel1.Text = "Sperrstatus:";
             // 
             // sperrstatusCheckBox1
             // 
@@ -674,15 +703,6 @@
             this.sperrstatusCheckBox1.Text = "checkBox1";
             this.sperrstatusCheckBox1.UseVisualStyleBackColor = true;
             // 
-            // vIPLabel1
-            // 
-            vIPLabel1.AutoSize = true;
-            vIPLabel1.Location = new System.Drawing.Point(824, 480);
-            vIPLabel1.Name = "vIPLabel1";
-            vIPLabel1.Size = new System.Drawing.Size(27, 13);
-            vIPLabel1.TabIndex = 48;
-            vIPLabel1.Text = "VIP:";
-            // 
             // vIPCheckBox1
             // 
             this.vIPCheckBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.casino_transaktionBindingSource, "casino_gast.VIP", true));
@@ -692,15 +712,6 @@
             this.vIPCheckBox1.TabIndex = 49;
             this.vIPCheckBox1.Text = "checkBox1";
             this.vIPCheckBox1.UseVisualStyleBackColor = true;
-            // 
-            // vornameLabel1
-            // 
-            vornameLabel1.AutoSize = true;
-            vornameLabel1.Location = new System.Drawing.Point(824, 508);
-            vornameLabel1.Name = "vornameLabel1";
-            vornameLabel1.Size = new System.Drawing.Size(52, 13);
-            vornameLabel1.TabIndex = 50;
-            vornameLabel1.Text = "Vorname:";
             // 
             // vornameTextBox1
             // 
@@ -740,11 +751,36 @@
             this.bindingNavigator1.TabIndex = 52;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem1
+            // 
+            this.bindingNavigatorAddNewItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
+            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
+            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem1.Text = "Neu hinzufügen";
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(44, 22);
+            this.bindingNavigatorCountItem1.Text = "von {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            // 
+            // bindingNavigatorDeleteItem1
+            // 
+            this.bindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
+            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
+            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem1.Text = "Löschen";
+            // 
             // bindingNavigatorMoveFirstItem1
             // 
             this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
-            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem1.Text = "Erste verschieben";
@@ -753,14 +789,14 @@
             // 
             this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
-            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem1.Text = "Vorherige verschieben";
             // 
             // bindingNavigatorSeparator3
             // 
-            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
             this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem1
@@ -768,28 +804,21 @@
             this.bindingNavigatorPositionItem1.AccessibleName = "Position";
             this.bindingNavigatorPositionItem1.AutoSize = false;
             this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
             this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem1.Text = "0";
             this.bindingNavigatorPositionItem1.ToolTipText = "Aktuelle Position";
             // 
-            // bindingNavigatorCountItem1
-            // 
-            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(44, 22);
-            this.bindingNavigatorCountItem1.Text = "von {0}";
-            this.bindingNavigatorCountItem1.ToolTipText = "Die Gesamtanzahl der Elemente.";
-            // 
             // bindingNavigatorSeparator4
             // 
-            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
             this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem1
             // 
             this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
-            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem1.Text = "Nächste verschieben";
@@ -798,48 +827,43 @@
             // 
             this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
-            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem1.Text = "Letzte verschieben";
             // 
             // bindingNavigatorSeparator5
             // 
-            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
             this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorAddNewItem1
+            // button2
             // 
-            this.bindingNavigatorAddNewItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
-            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem1.Text = "Neu hinzufügen";
+            this.button2.Location = new System.Drawing.Point(81, 407);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 53;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // bindingNavigatorDeleteItem1
+            // button3
             // 
-            this.bindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
-            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem1.Text = "Löschen";
-            // 
-            // casino_transaktionBindingSource
-            // 
-            this.casino_transaktionBindingSource.DataSource = typeof(DBProjekt.casino_transaktion);
-            // 
-            // casino_gastBindingSource
-            // 
-            this.casino_gastBindingSource.DataSource = typeof(DBProjekt.casino_gast);
-            this.casino_gastBindingSource.CurrentChanged += new System.EventHandler(this.casino_gastBindingSource_CurrentChanged);
+            this.button3.Location = new System.Drawing.Point(222, 407);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 54;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Gast_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1197, 605);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(adresseLabel1);
             this.Controls.Add(this.adresseTextBox1);
@@ -898,11 +922,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingNavigator)).EndInit();
             this.casino_gastBindingNavigator.ResumeLayout(false);
             this.casino_gastBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_transaktionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_transaktionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -965,5 +989,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

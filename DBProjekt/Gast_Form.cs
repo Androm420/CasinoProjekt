@@ -25,9 +25,7 @@ namespace DBProjekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var current = casino_gastBindingSource.Current as casino_gast;
             casino_gastBindingSource.EndEdit();
-            CasinoDaten.casino_gast.Add(current);
             casino_gastBindingSource.ResetBindings(false);
             CasinoDaten.SaveChanges();
         }
@@ -70,6 +68,26 @@ namespace DBProjekt
 
             var query = CasinoDaten.casino_gast.SelectMany(al => al.casino_transaktion.Where(als => als.casino_gast.PK_Gast == current_gast.PK_Gast)).ToList();
             casino_transaktionBindingSource.DataSource = query;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var current_gast = casino_gastBindingSource.Current as casino_gast;
+            var confirm_msg = MessageBox.Show("Gast: " + current_gast.Nachname + " Löschen?","Wirklich Löschen?",MessageBoxButtons.YesNo);
+            if (confirm_msg== DialogResult.Yes)
+            {
+                CasinoDaten.casino_gast.Remove(current_gast);
+                CasinoDaten.SaveChanges();
+                casino_gastBindingSource.ResetBindings(false);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var current = casino_gastBindingSource.Current as casino_gast;
+            CasinoDaten.casino_gast.Add(current);
+            casino_gastBindingSource.ResetBindings(false);
+            CasinoDaten.SaveChanges();
         }
     }
 }

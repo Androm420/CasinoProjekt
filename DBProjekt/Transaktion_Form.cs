@@ -33,5 +33,17 @@ namespace DBProjekt
             casino_transaktionBindingSource.EndEdit();
             CasinoDaten.SaveChanges();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var current_gast = casino_transaktionBindingSource.Current as casino_transaktion;
+            var confirm_msg = MessageBox.Show("Transaktion: " + current_gast.PK_Transaktion+ " Löschen?", "Wirklich Löschen?", MessageBoxButtons.YesNo);
+            if (confirm_msg == DialogResult.Yes)
+            {
+                CasinoDaten.casino_transaktion.Remove(current_gast);
+                CasinoDaten.SaveChanges();
+                casino_transaktionBindingSource.ResetBindings(false);
+            }
+        }
     }
 }

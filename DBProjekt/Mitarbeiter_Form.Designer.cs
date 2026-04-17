@@ -45,13 +45,14 @@
             System.Windows.Forms.Label bezeichnungLabel;
             System.Windows.Forms.Label gehaltLabel;
             System.Windows.Forms.Label pK_RolleLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mitarbeiter_Form));
             System.Windows.Forms.Label datumLabel;
             System.Windows.Forms.Label endzeitLabel;
             System.Windows.Forms.Label pK_SchichtLabel;
             System.Windows.Forms.Label startzeitLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mitarbeiter_Form));
             this.casino_mitarbeiterBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.casino_mitarbeiterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -90,7 +91,7 @@
             this.Raum = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.casino_mitarbeiterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             adresseLabel = new System.Windows.Forms.Label();
             einstellungsdatumLabel = new System.Windows.Forms.Label();
             eMailLabel = new System.Windows.Forms.Label();
@@ -113,8 +114,8 @@
             startzeitLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.casino_mitarbeiterBindingNavigator)).BeginInit();
             this.casino_mitarbeiterBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_schichtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.casino_mitarbeiterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_schichtBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // adresseLabel
@@ -261,6 +262,42 @@
             pK_RolleLabel.TabIndex = 31;
             pK_RolleLabel.Text = "PK Rolle:";
             // 
+            // datumLabel
+            // 
+            datumLabel.AutoSize = true;
+            datumLabel.Location = new System.Drawing.Point(429, 274);
+            datumLabel.Name = "datumLabel";
+            datumLabel.Size = new System.Drawing.Size(41, 13);
+            datumLabel.TabIndex = 35;
+            datumLabel.Text = "Datum:";
+            // 
+            // endzeitLabel
+            // 
+            endzeitLabel.AutoSize = true;
+            endzeitLabel.Location = new System.Drawing.Point(429, 299);
+            endzeitLabel.Name = "endzeitLabel";
+            endzeitLabel.Size = new System.Drawing.Size(45, 13);
+            endzeitLabel.TabIndex = 37;
+            endzeitLabel.Text = "Endzeit:";
+            // 
+            // pK_SchichtLabel
+            // 
+            pK_SchichtLabel.AutoSize = true;
+            pK_SchichtLabel.Location = new System.Drawing.Point(429, 325);
+            pK_SchichtLabel.Name = "pK_SchichtLabel";
+            pK_SchichtLabel.Size = new System.Drawing.Size(63, 13);
+            pK_SchichtLabel.TabIndex = 39;
+            pK_SchichtLabel.Text = "PK Schicht:";
+            // 
+            // startzeitLabel
+            // 
+            startzeitLabel.AutoSize = true;
+            startzeitLabel.Location = new System.Drawing.Point(429, 351);
+            startzeitLabel.Name = "startzeitLabel";
+            startzeitLabel.Size = new System.Drawing.Size(48, 13);
+            startzeitLabel.TabIndex = 41;
+            startzeitLabel.Text = "Startzeit:";
+            // 
             // casino_mitarbeiterBindingNavigator
             // 
             this.casino_mitarbeiterBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -299,6 +336,10 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Neu hinzufügen";
+            // 
+            // casino_mitarbeiterBindingSource
+            // 
+            this.casino_mitarbeiterBindingSource.DataSource = typeof(DBProjekt.casino_mitarbeiter);
             // 
             // bindingNavigatorCountItem
             // 
@@ -538,15 +579,6 @@
             this.casino_schichtBindingSource.DataMember = "casino_schicht";
             this.casino_schichtBindingSource.DataSource = this.casino_mitarbeiterBindingSource;
             // 
-            // datumLabel
-            // 
-            datumLabel.AutoSize = true;
-            datumLabel.Location = new System.Drawing.Point(429, 274);
-            datumLabel.Name = "datumLabel";
-            datumLabel.Size = new System.Drawing.Size(41, 13);
-            datumLabel.TabIndex = 35;
-            datumLabel.Text = "Datum:";
-            // 
             // datumDateTimePicker
             // 
             this.datumDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.casino_schichtBindingSource, "Datum", true));
@@ -554,15 +586,6 @@
             this.datumDateTimePicker.Name = "datumDateTimePicker";
             this.datumDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.datumDateTimePicker.TabIndex = 36;
-            // 
-            // endzeitLabel
-            // 
-            endzeitLabel.AutoSize = true;
-            endzeitLabel.Location = new System.Drawing.Point(429, 299);
-            endzeitLabel.Name = "endzeitLabel";
-            endzeitLabel.Size = new System.Drawing.Size(45, 13);
-            endzeitLabel.TabIndex = 37;
-            endzeitLabel.Text = "Endzeit:";
             // 
             // endzeitTextBox
             // 
@@ -572,15 +595,6 @@
             this.endzeitTextBox.Size = new System.Drawing.Size(200, 20);
             this.endzeitTextBox.TabIndex = 38;
             // 
-            // pK_SchichtLabel
-            // 
-            pK_SchichtLabel.AutoSize = true;
-            pK_SchichtLabel.Location = new System.Drawing.Point(429, 325);
-            pK_SchichtLabel.Name = "pK_SchichtLabel";
-            pK_SchichtLabel.Size = new System.Drawing.Size(63, 13);
-            pK_SchichtLabel.TabIndex = 39;
-            pK_SchichtLabel.Text = "PK Schicht:";
-            // 
             // pK_SchichtTextBox
             // 
             this.pK_SchichtTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_schichtBindingSource, "PK_Schicht", true));
@@ -588,15 +602,6 @@
             this.pK_SchichtTextBox.Name = "pK_SchichtTextBox";
             this.pK_SchichtTextBox.Size = new System.Drawing.Size(200, 20);
             this.pK_SchichtTextBox.TabIndex = 40;
-            // 
-            // startzeitLabel
-            // 
-            startzeitLabel.AutoSize = true;
-            startzeitLabel.Location = new System.Drawing.Point(429, 351);
-            startzeitLabel.Name = "startzeitLabel";
-            startzeitLabel.Size = new System.Drawing.Size(48, 13);
-            startzeitLabel.TabIndex = 41;
-            startzeitLabel.Text = "Startzeit:";
             // 
             // startzeitTextBox
             // 
@@ -642,15 +647,22 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Rolle";
             // 
-            // casino_mitarbeiterBindingSource
+            // button3
             // 
-            this.casino_mitarbeiterBindingSource.DataSource = typeof(DBProjekt.casino_mitarbeiter);
+            this.button3.Location = new System.Drawing.Point(557, 62);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 48;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Mitarbeiter_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 603);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Raum);
@@ -703,8 +715,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.casino_mitarbeiterBindingNavigator)).EndInit();
             this.casino_mitarbeiterBindingNavigator.ResumeLayout(false);
             this.casino_mitarbeiterBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_schichtBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.casino_mitarbeiterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_schichtBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,5 +765,6 @@
         private System.Windows.Forms.ComboBox Raum;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
     }
 }

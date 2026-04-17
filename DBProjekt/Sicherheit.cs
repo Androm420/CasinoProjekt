@@ -37,5 +37,17 @@ namespace DBProjekt
             casino_gastBindingSource.DataSource = query;
             casino_mitarbeiterBindingSource.DataSource = query2;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var current_gast = casino_sicherheitsvorfallBindingSource?.Current as casino_sicherheitsvorfall;
+            var confirm_msg = MessageBox.Show("Sicherheitfall: " + current_gast.Beschreibung+ " Löschen?", "Wirklich Löschen?", MessageBoxButtons.YesNo);
+            if (confirm_msg == DialogResult.Yes)
+            {
+                daten.casino_sicherheitsvorfall.Remove(current_gast);
+                daten.SaveChanges();
+                casino_gastBindingSource.ResetBindings(false);
+            }
+        }
     }
 }

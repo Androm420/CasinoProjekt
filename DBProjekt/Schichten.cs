@@ -19,5 +19,11 @@ namespace DBProjekt
             InitializeComponent();
             casino_schichtBindingSource.DataSource = CasinoDaten.casino_schicht.ToList();
         }
+
+        private void casino_schichtDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var current = casino_schichtBindingSource?.Current as casino_schicht;
+            casino_mitarbeiterBindingSource.DataSource = current.casino_mitarbeiter;
+        }
     }
 }

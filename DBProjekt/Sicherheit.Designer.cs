@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sicherheit));
             System.Windows.Forms.Label adresseLabel;
             System.Windows.Forms.Label einstellungsdatumLabel;
             System.Windows.Forms.Label eMailLabel;
@@ -55,6 +54,7 @@
             System.Windows.Forms.Label sperrstatusLabel;
             System.Windows.Forms.Label vIPLabel;
             System.Windows.Forms.Label vornameLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sicherheit));
             this.casino_sicherheitsvorfallBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.casino_sicherheitsvorfallBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -109,6 +109,7 @@
             this.sperrstatusCheckBox = new System.Windows.Forms.CheckBox();
             this.vIPCheckBox = new System.Windows.Forms.CheckBox();
             this.vornameTextBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             adresseLabel = new System.Windows.Forms.Label();
             einstellungsdatumLabel = new System.Windows.Forms.Label();
             eMailLabel = new System.Windows.Forms.Label();
@@ -141,6 +142,231 @@
             ((System.ComponentModel.ISupportInitialize)(this.casino_mitarbeiterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // adresseLabel
+            // 
+            adresseLabel.AutoSize = true;
+            adresseLabel.Location = new System.Drawing.Point(19, 317);
+            adresseLabel.Name = "adresseLabel";
+            adresseLabel.Size = new System.Drawing.Size(48, 13);
+            adresseLabel.TabIndex = 2;
+            adresseLabel.Text = "Adresse:";
+            // 
+            // einstellungsdatumLabel
+            // 
+            einstellungsdatumLabel.AutoSize = true;
+            einstellungsdatumLabel.Location = new System.Drawing.Point(19, 344);
+            einstellungsdatumLabel.Name = "einstellungsdatumLabel";
+            einstellungsdatumLabel.Size = new System.Drawing.Size(95, 13);
+            einstellungsdatumLabel.TabIndex = 4;
+            einstellungsdatumLabel.Text = "Einstellungsdatum:";
+            // 
+            // eMailLabel
+            // 
+            eMailLabel.AutoSize = true;
+            eMailLabel.Location = new System.Drawing.Point(19, 369);
+            eMailLabel.Name = "eMailLabel";
+            eMailLabel.Size = new System.Drawing.Size(36, 13);
+            eMailLabel.TabIndex = 6;
+            eMailLabel.Text = "EMail:";
+            // 
+            // fK_RaumLabel
+            // 
+            fK_RaumLabel.AutoSize = true;
+            fK_RaumLabel.Location = new System.Drawing.Point(19, 395);
+            fK_RaumLabel.Name = "fK_RaumLabel";
+            fK_RaumLabel.Size = new System.Drawing.Size(54, 13);
+            fK_RaumLabel.TabIndex = 8;
+            fK_RaumLabel.Text = "FK Raum:";
+            // 
+            // fK_RolleLabel
+            // 
+            fK_RolleLabel.AutoSize = true;
+            fK_RolleLabel.Location = new System.Drawing.Point(19, 421);
+            fK_RolleLabel.Name = "fK_RolleLabel";
+            fK_RolleLabel.Size = new System.Drawing.Size(50, 13);
+            fK_RolleLabel.TabIndex = 10;
+            fK_RolleLabel.Text = "FK Rolle:";
+            // 
+            // geburtsdatumLabel
+            // 
+            geburtsdatumLabel.AutoSize = true;
+            geburtsdatumLabel.Location = new System.Drawing.Point(19, 448);
+            geburtsdatumLabel.Name = "geburtsdatumLabel";
+            geburtsdatumLabel.Size = new System.Drawing.Size(76, 13);
+            geburtsdatumLabel.TabIndex = 12;
+            geburtsdatumLabel.Text = "Geburtsdatum:";
+            // 
+            // geschlechtLabel
+            // 
+            geschlechtLabel.AutoSize = true;
+            geschlechtLabel.Location = new System.Drawing.Point(19, 473);
+            geschlechtLabel.Name = "geschlechtLabel";
+            geschlechtLabel.Size = new System.Drawing.Size(64, 13);
+            geschlechtLabel.TabIndex = 14;
+            geschlechtLabel.Text = "Geschlecht:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(19, 499);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.TabIndex = 16;
+            nameLabel.Text = "Name:";
+            // 
+            // pK_MitarbeiterLabel
+            // 
+            pK_MitarbeiterLabel.AutoSize = true;
+            pK_MitarbeiterLabel.Location = new System.Drawing.Point(19, 525);
+            pK_MitarbeiterLabel.Name = "pK_MitarbeiterLabel";
+            pK_MitarbeiterLabel.Size = new System.Drawing.Size(76, 13);
+            pK_MitarbeiterLabel.TabIndex = 18;
+            pK_MitarbeiterLabel.Text = "PK Mitarbeiter:";
+            // 
+            // telefonnummerLabel
+            // 
+            telefonnummerLabel.AutoSize = true;
+            telefonnummerLabel.Location = new System.Drawing.Point(19, 551);
+            telefonnummerLabel.Name = "telefonnummerLabel";
+            telefonnummerLabel.Size = new System.Drawing.Size(83, 13);
+            telefonnummerLabel.TabIndex = 20;
+            telefonnummerLabel.Text = "Telefonnummer:";
+            // 
+            // vornameLabel
+            // 
+            vornameLabel.AutoSize = true;
+            vornameLabel.Location = new System.Drawing.Point(19, 577);
+            vornameLabel.Name = "vornameLabel";
+            vornameLabel.Size = new System.Drawing.Size(52, 13);
+            vornameLabel.TabIndex = 22;
+            vornameLabel.Text = "Vorname:";
+            // 
+            // pK_RaumLabel
+            // 
+            pK_RaumLabel.AutoSize = true;
+            pK_RaumLabel.Location = new System.Drawing.Point(19, 637);
+            pK_RaumLabel.Name = "pK_RaumLabel";
+            pK_RaumLabel.Size = new System.Drawing.Size(55, 13);
+            pK_RaumLabel.TabIndex = 24;
+            pK_RaumLabel.Text = "PK Raum:";
+            // 
+            // raumbezeichnungLabel
+            // 
+            raumbezeichnungLabel.AutoSize = true;
+            raumbezeichnungLabel.Location = new System.Drawing.Point(19, 663);
+            raumbezeichnungLabel.Name = "raumbezeichnungLabel";
+            raumbezeichnungLabel.Size = new System.Drawing.Size(99, 13);
+            raumbezeichnungLabel.TabIndex = 26;
+            raumbezeichnungLabel.Text = "Raumbezeichnung:";
+            // 
+            // bezeichnungLabel
+            // 
+            bezeichnungLabel.AutoSize = true;
+            bezeichnungLabel.Location = new System.Drawing.Point(19, 723);
+            bezeichnungLabel.Name = "bezeichnungLabel";
+            bezeichnungLabel.Size = new System.Drawing.Size(72, 13);
+            bezeichnungLabel.TabIndex = 28;
+            bezeichnungLabel.Text = "Bezeichnung:";
+            // 
+            // gehaltLabel
+            // 
+            gehaltLabel.AutoSize = true;
+            gehaltLabel.Location = new System.Drawing.Point(19, 749);
+            gehaltLabel.Name = "gehaltLabel";
+            gehaltLabel.Size = new System.Drawing.Size(41, 13);
+            gehaltLabel.TabIndex = 30;
+            gehaltLabel.Text = "Gehalt:";
+            // 
+            // pK_RolleLabel
+            // 
+            pK_RolleLabel.AutoSize = true;
+            pK_RolleLabel.Location = new System.Drawing.Point(19, 775);
+            pK_RolleLabel.Name = "pK_RolleLabel";
+            pK_RolleLabel.Size = new System.Drawing.Size(51, 13);
+            pK_RolleLabel.TabIndex = 32;
+            pK_RolleLabel.Text = "PK Rolle:";
+            // 
+            // adresseLabel1
+            // 
+            adresseLabel1.AutoSize = true;
+            adresseLabel1.Location = new System.Drawing.Point(443, 316);
+            adresseLabel1.Name = "adresseLabel1";
+            adresseLabel1.Size = new System.Drawing.Size(48, 13);
+            adresseLabel1.TabIndex = 34;
+            adresseLabel1.Text = "Adresse:";
+            // 
+            // ausweisnummerLabel
+            // 
+            ausweisnummerLabel.AutoSize = true;
+            ausweisnummerLabel.Location = new System.Drawing.Point(443, 342);
+            ausweisnummerLabel.Name = "ausweisnummerLabel";
+            ausweisnummerLabel.Size = new System.Drawing.Size(86, 13);
+            ausweisnummerLabel.TabIndex = 36;
+            ausweisnummerLabel.Text = "Ausweisnummer:";
+            // 
+            // geburtsdatumLabel1
+            // 
+            geburtsdatumLabel1.AutoSize = true;
+            geburtsdatumLabel1.Location = new System.Drawing.Point(443, 369);
+            geburtsdatumLabel1.Name = "geburtsdatumLabel1";
+            geburtsdatumLabel1.Size = new System.Drawing.Size(76, 13);
+            geburtsdatumLabel1.TabIndex = 38;
+            geburtsdatumLabel1.Text = "Geburtsdatum:";
+            // 
+            // nachnameLabel
+            // 
+            nachnameLabel.AutoSize = true;
+            nachnameLabel.Location = new System.Drawing.Point(443, 394);
+            nachnameLabel.Name = "nachnameLabel";
+            nachnameLabel.Size = new System.Drawing.Size(62, 13);
+            nachnameLabel.TabIndex = 40;
+            nachnameLabel.Text = "Nachname:";
+            // 
+            // pK_GastLabel
+            // 
+            pK_GastLabel.AutoSize = true;
+            pK_GastLabel.Location = new System.Drawing.Point(443, 420);
+            pK_GastLabel.Name = "pK_GastLabel";
+            pK_GastLabel.Size = new System.Drawing.Size(49, 13);
+            pK_GastLabel.TabIndex = 42;
+            pK_GastLabel.Text = "PK Gast:";
+            // 
+            // registrierungsdatumLabel
+            // 
+            registrierungsdatumLabel.AutoSize = true;
+            registrierungsdatumLabel.Location = new System.Drawing.Point(443, 447);
+            registrierungsdatumLabel.Name = "registrierungsdatumLabel";
+            registrierungsdatumLabel.Size = new System.Drawing.Size(106, 13);
+            registrierungsdatumLabel.TabIndex = 44;
+            registrierungsdatumLabel.Text = "Registrierungsdatum:";
+            // 
+            // sperrstatusLabel
+            // 
+            sperrstatusLabel.AutoSize = true;
+            sperrstatusLabel.Location = new System.Drawing.Point(443, 474);
+            sperrstatusLabel.Name = "sperrstatusLabel";
+            sperrstatusLabel.Size = new System.Drawing.Size(63, 13);
+            sperrstatusLabel.TabIndex = 46;
+            sperrstatusLabel.Text = "Sperrstatus:";
+            // 
+            // vIPLabel
+            // 
+            vIPLabel.AutoSize = true;
+            vIPLabel.Location = new System.Drawing.Point(443, 504);
+            vIPLabel.Name = "vIPLabel";
+            vIPLabel.Size = new System.Drawing.Size(27, 13);
+            vIPLabel.TabIndex = 48;
+            vIPLabel.Text = "VIP:";
+            // 
+            // vornameLabel1
+            // 
+            vornameLabel1.AutoSize = true;
+            vornameLabel1.Location = new System.Drawing.Point(443, 532);
+            vornameLabel1.Name = "vornameLabel1";
+            vornameLabel1.Size = new System.Drawing.Size(52, 13);
+            vornameLabel1.TabIndex = 50;
+            vornameLabel1.Text = "Vorname:";
             // 
             // casino_sicherheitsvorfallBindingNavigator
             // 
@@ -371,15 +597,6 @@
             // 
             this.casino_mitarbeiterBindingSource.DataSource = typeof(DBProjekt.casino_mitarbeiter);
             // 
-            // adresseLabel
-            // 
-            adresseLabel.AutoSize = true;
-            adresseLabel.Location = new System.Drawing.Point(19, 317);
-            adresseLabel.Name = "adresseLabel";
-            adresseLabel.Size = new System.Drawing.Size(48, 13);
-            adresseLabel.TabIndex = 2;
-            adresseLabel.Text = "Adresse:";
-            // 
             // adresseTextBox
             // 
             this.adresseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_mitarbeiterBindingSource, "Adresse", true));
@@ -387,15 +604,6 @@
             this.adresseTextBox.Name = "adresseTextBox";
             this.adresseTextBox.Size = new System.Drawing.Size(200, 20);
             this.adresseTextBox.TabIndex = 3;
-            // 
-            // einstellungsdatumLabel
-            // 
-            einstellungsdatumLabel.AutoSize = true;
-            einstellungsdatumLabel.Location = new System.Drawing.Point(19, 344);
-            einstellungsdatumLabel.Name = "einstellungsdatumLabel";
-            einstellungsdatumLabel.Size = new System.Drawing.Size(95, 13);
-            einstellungsdatumLabel.TabIndex = 4;
-            einstellungsdatumLabel.Text = "Einstellungsdatum:";
             // 
             // einstellungsdatumDateTimePicker
             // 
@@ -405,15 +613,6 @@
             this.einstellungsdatumDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.einstellungsdatumDateTimePicker.TabIndex = 5;
             // 
-            // eMailLabel
-            // 
-            eMailLabel.AutoSize = true;
-            eMailLabel.Location = new System.Drawing.Point(19, 369);
-            eMailLabel.Name = "eMailLabel";
-            eMailLabel.Size = new System.Drawing.Size(36, 13);
-            eMailLabel.TabIndex = 6;
-            eMailLabel.Text = "EMail:";
-            // 
             // eMailTextBox
             // 
             this.eMailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_mitarbeiterBindingSource, "EMail", true));
@@ -421,15 +620,6 @@
             this.eMailTextBox.Name = "eMailTextBox";
             this.eMailTextBox.Size = new System.Drawing.Size(200, 20);
             this.eMailTextBox.TabIndex = 7;
-            // 
-            // fK_RaumLabel
-            // 
-            fK_RaumLabel.AutoSize = true;
-            fK_RaumLabel.Location = new System.Drawing.Point(19, 395);
-            fK_RaumLabel.Name = "fK_RaumLabel";
-            fK_RaumLabel.Size = new System.Drawing.Size(54, 13);
-            fK_RaumLabel.TabIndex = 8;
-            fK_RaumLabel.Text = "FK Raum:";
             // 
             // fK_RaumTextBox
             // 
@@ -439,15 +629,6 @@
             this.fK_RaumTextBox.Size = new System.Drawing.Size(200, 20);
             this.fK_RaumTextBox.TabIndex = 9;
             // 
-            // fK_RolleLabel
-            // 
-            fK_RolleLabel.AutoSize = true;
-            fK_RolleLabel.Location = new System.Drawing.Point(19, 421);
-            fK_RolleLabel.Name = "fK_RolleLabel";
-            fK_RolleLabel.Size = new System.Drawing.Size(50, 13);
-            fK_RolleLabel.TabIndex = 10;
-            fK_RolleLabel.Text = "FK Rolle:";
-            // 
             // fK_RolleTextBox
             // 
             this.fK_RolleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_mitarbeiterBindingSource, "FK_Rolle", true));
@@ -455,15 +636,6 @@
             this.fK_RolleTextBox.Name = "fK_RolleTextBox";
             this.fK_RolleTextBox.Size = new System.Drawing.Size(200, 20);
             this.fK_RolleTextBox.TabIndex = 11;
-            // 
-            // geburtsdatumLabel
-            // 
-            geburtsdatumLabel.AutoSize = true;
-            geburtsdatumLabel.Location = new System.Drawing.Point(19, 448);
-            geburtsdatumLabel.Name = "geburtsdatumLabel";
-            geburtsdatumLabel.Size = new System.Drawing.Size(76, 13);
-            geburtsdatumLabel.TabIndex = 12;
-            geburtsdatumLabel.Text = "Geburtsdatum:";
             // 
             // geburtsdatumDateTimePicker
             // 
@@ -473,15 +645,6 @@
             this.geburtsdatumDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.geburtsdatumDateTimePicker.TabIndex = 13;
             // 
-            // geschlechtLabel
-            // 
-            geschlechtLabel.AutoSize = true;
-            geschlechtLabel.Location = new System.Drawing.Point(19, 473);
-            geschlechtLabel.Name = "geschlechtLabel";
-            geschlechtLabel.Size = new System.Drawing.Size(64, 13);
-            geschlechtLabel.TabIndex = 14;
-            geschlechtLabel.Text = "Geschlecht:";
-            // 
             // geschlechtTextBox
             // 
             this.geschlechtTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_mitarbeiterBindingSource, "Geschlecht", true));
@@ -489,15 +652,6 @@
             this.geschlechtTextBox.Name = "geschlechtTextBox";
             this.geschlechtTextBox.Size = new System.Drawing.Size(200, 20);
             this.geschlechtTextBox.TabIndex = 15;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(19, 499);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(38, 13);
-            nameLabel.TabIndex = 16;
-            nameLabel.Text = "Name:";
             // 
             // nameTextBox
             // 
@@ -507,15 +661,6 @@
             this.nameTextBox.Size = new System.Drawing.Size(200, 20);
             this.nameTextBox.TabIndex = 17;
             // 
-            // pK_MitarbeiterLabel
-            // 
-            pK_MitarbeiterLabel.AutoSize = true;
-            pK_MitarbeiterLabel.Location = new System.Drawing.Point(19, 525);
-            pK_MitarbeiterLabel.Name = "pK_MitarbeiterLabel";
-            pK_MitarbeiterLabel.Size = new System.Drawing.Size(76, 13);
-            pK_MitarbeiterLabel.TabIndex = 18;
-            pK_MitarbeiterLabel.Text = "PK Mitarbeiter:";
-            // 
             // pK_MitarbeiterTextBox
             // 
             this.pK_MitarbeiterTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_mitarbeiterBindingSource, "PK_Mitarbeiter", true));
@@ -523,15 +668,6 @@
             this.pK_MitarbeiterTextBox.Name = "pK_MitarbeiterTextBox";
             this.pK_MitarbeiterTextBox.Size = new System.Drawing.Size(200, 20);
             this.pK_MitarbeiterTextBox.TabIndex = 19;
-            // 
-            // telefonnummerLabel
-            // 
-            telefonnummerLabel.AutoSize = true;
-            telefonnummerLabel.Location = new System.Drawing.Point(19, 551);
-            telefonnummerLabel.Name = "telefonnummerLabel";
-            telefonnummerLabel.Size = new System.Drawing.Size(83, 13);
-            telefonnummerLabel.TabIndex = 20;
-            telefonnummerLabel.Text = "Telefonnummer:";
             // 
             // telefonnummerTextBox
             // 
@@ -541,15 +677,6 @@
             this.telefonnummerTextBox.Size = new System.Drawing.Size(200, 20);
             this.telefonnummerTextBox.TabIndex = 21;
             // 
-            // vornameLabel
-            // 
-            vornameLabel.AutoSize = true;
-            vornameLabel.Location = new System.Drawing.Point(19, 577);
-            vornameLabel.Name = "vornameLabel";
-            vornameLabel.Size = new System.Drawing.Size(52, 13);
-            vornameLabel.TabIndex = 22;
-            vornameLabel.Text = "Vorname:";
-            // 
             // vornameTextBox
             // 
             this.vornameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_mitarbeiterBindingSource, "Vorname", true));
@@ -557,15 +684,6 @@
             this.vornameTextBox.Name = "vornameTextBox";
             this.vornameTextBox.Size = new System.Drawing.Size(200, 20);
             this.vornameTextBox.TabIndex = 23;
-            // 
-            // pK_RaumLabel
-            // 
-            pK_RaumLabel.AutoSize = true;
-            pK_RaumLabel.Location = new System.Drawing.Point(19, 637);
-            pK_RaumLabel.Name = "pK_RaumLabel";
-            pK_RaumLabel.Size = new System.Drawing.Size(55, 13);
-            pK_RaumLabel.TabIndex = 24;
-            pK_RaumLabel.Text = "PK Raum:";
             // 
             // pK_RaumTextBox
             // 
@@ -575,15 +693,6 @@
             this.pK_RaumTextBox.Size = new System.Drawing.Size(100, 20);
             this.pK_RaumTextBox.TabIndex = 25;
             // 
-            // raumbezeichnungLabel
-            // 
-            raumbezeichnungLabel.AutoSize = true;
-            raumbezeichnungLabel.Location = new System.Drawing.Point(19, 663);
-            raumbezeichnungLabel.Name = "raumbezeichnungLabel";
-            raumbezeichnungLabel.Size = new System.Drawing.Size(99, 13);
-            raumbezeichnungLabel.TabIndex = 26;
-            raumbezeichnungLabel.Text = "Raumbezeichnung:";
-            // 
             // raumbezeichnungTextBox
             // 
             this.raumbezeichnungTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_mitarbeiterBindingSource, "casino_raeume.Raumbezeichnung", true));
@@ -591,15 +700,6 @@
             this.raumbezeichnungTextBox.Name = "raumbezeichnungTextBox";
             this.raumbezeichnungTextBox.Size = new System.Drawing.Size(100, 20);
             this.raumbezeichnungTextBox.TabIndex = 27;
-            // 
-            // bezeichnungLabel
-            // 
-            bezeichnungLabel.AutoSize = true;
-            bezeichnungLabel.Location = new System.Drawing.Point(19, 723);
-            bezeichnungLabel.Name = "bezeichnungLabel";
-            bezeichnungLabel.Size = new System.Drawing.Size(72, 13);
-            bezeichnungLabel.TabIndex = 28;
-            bezeichnungLabel.Text = "Bezeichnung:";
             // 
             // bezeichnungTextBox
             // 
@@ -609,15 +709,6 @@
             this.bezeichnungTextBox.Size = new System.Drawing.Size(100, 20);
             this.bezeichnungTextBox.TabIndex = 29;
             // 
-            // gehaltLabel
-            // 
-            gehaltLabel.AutoSize = true;
-            gehaltLabel.Location = new System.Drawing.Point(19, 749);
-            gehaltLabel.Name = "gehaltLabel";
-            gehaltLabel.Size = new System.Drawing.Size(41, 13);
-            gehaltLabel.TabIndex = 30;
-            gehaltLabel.Text = "Gehalt:";
-            // 
             // gehaltTextBox
             // 
             this.gehaltTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_mitarbeiterBindingSource, "casino_rollen.Gehalt", true));
@@ -625,15 +716,6 @@
             this.gehaltTextBox.Name = "gehaltTextBox";
             this.gehaltTextBox.Size = new System.Drawing.Size(100, 20);
             this.gehaltTextBox.TabIndex = 31;
-            // 
-            // pK_RolleLabel
-            // 
-            pK_RolleLabel.AutoSize = true;
-            pK_RolleLabel.Location = new System.Drawing.Point(19, 775);
-            pK_RolleLabel.Name = "pK_RolleLabel";
-            pK_RolleLabel.Size = new System.Drawing.Size(51, 13);
-            pK_RolleLabel.TabIndex = 32;
-            pK_RolleLabel.Text = "PK Rolle:";
             // 
             // pK_RolleTextBox
             // 
@@ -647,15 +729,6 @@
             // 
             this.casino_gastBindingSource.DataSource = typeof(DBProjekt.casino_gast);
             // 
-            // adresseLabel1
-            // 
-            adresseLabel1.AutoSize = true;
-            adresseLabel1.Location = new System.Drawing.Point(443, 316);
-            adresseLabel1.Name = "adresseLabel1";
-            adresseLabel1.Size = new System.Drawing.Size(48, 13);
-            adresseLabel1.TabIndex = 34;
-            adresseLabel1.Text = "Adresse:";
-            // 
             // adresseTextBox1
             // 
             this.adresseTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_gastBindingSource, "Adresse", true));
@@ -663,15 +736,6 @@
             this.adresseTextBox1.Name = "adresseTextBox1";
             this.adresseTextBox1.Size = new System.Drawing.Size(200, 20);
             this.adresseTextBox1.TabIndex = 35;
-            // 
-            // ausweisnummerLabel
-            // 
-            ausweisnummerLabel.AutoSize = true;
-            ausweisnummerLabel.Location = new System.Drawing.Point(443, 342);
-            ausweisnummerLabel.Name = "ausweisnummerLabel";
-            ausweisnummerLabel.Size = new System.Drawing.Size(86, 13);
-            ausweisnummerLabel.TabIndex = 36;
-            ausweisnummerLabel.Text = "Ausweisnummer:";
             // 
             // ausweisnummerTextBox
             // 
@@ -681,15 +745,6 @@
             this.ausweisnummerTextBox.Size = new System.Drawing.Size(200, 20);
             this.ausweisnummerTextBox.TabIndex = 37;
             // 
-            // geburtsdatumLabel1
-            // 
-            geburtsdatumLabel1.AutoSize = true;
-            geburtsdatumLabel1.Location = new System.Drawing.Point(443, 369);
-            geburtsdatumLabel1.Name = "geburtsdatumLabel1";
-            geburtsdatumLabel1.Size = new System.Drawing.Size(76, 13);
-            geburtsdatumLabel1.TabIndex = 38;
-            geburtsdatumLabel1.Text = "Geburtsdatum:";
-            // 
             // geburtsdatumDateTimePicker1
             // 
             this.geburtsdatumDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.casino_gastBindingSource, "Geburtsdatum", true));
@@ -697,15 +752,6 @@
             this.geburtsdatumDateTimePicker1.Name = "geburtsdatumDateTimePicker1";
             this.geburtsdatumDateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.geburtsdatumDateTimePicker1.TabIndex = 39;
-            // 
-            // nachnameLabel
-            // 
-            nachnameLabel.AutoSize = true;
-            nachnameLabel.Location = new System.Drawing.Point(443, 394);
-            nachnameLabel.Name = "nachnameLabel";
-            nachnameLabel.Size = new System.Drawing.Size(62, 13);
-            nachnameLabel.TabIndex = 40;
-            nachnameLabel.Text = "Nachname:";
             // 
             // nachnameTextBox
             // 
@@ -715,15 +761,6 @@
             this.nachnameTextBox.Size = new System.Drawing.Size(200, 20);
             this.nachnameTextBox.TabIndex = 41;
             // 
-            // pK_GastLabel
-            // 
-            pK_GastLabel.AutoSize = true;
-            pK_GastLabel.Location = new System.Drawing.Point(443, 420);
-            pK_GastLabel.Name = "pK_GastLabel";
-            pK_GastLabel.Size = new System.Drawing.Size(49, 13);
-            pK_GastLabel.TabIndex = 42;
-            pK_GastLabel.Text = "PK Gast:";
-            // 
             // pK_GastTextBox
             // 
             this.pK_GastTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_gastBindingSource, "PK_Gast", true));
@@ -732,15 +769,6 @@
             this.pK_GastTextBox.Size = new System.Drawing.Size(200, 20);
             this.pK_GastTextBox.TabIndex = 43;
             // 
-            // registrierungsdatumLabel
-            // 
-            registrierungsdatumLabel.AutoSize = true;
-            registrierungsdatumLabel.Location = new System.Drawing.Point(443, 447);
-            registrierungsdatumLabel.Name = "registrierungsdatumLabel";
-            registrierungsdatumLabel.Size = new System.Drawing.Size(106, 13);
-            registrierungsdatumLabel.TabIndex = 44;
-            registrierungsdatumLabel.Text = "Registrierungsdatum:";
-            // 
             // registrierungsdatumDateTimePicker
             // 
             this.registrierungsdatumDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.casino_gastBindingSource, "Registrierungsdatum", true));
@@ -748,15 +776,6 @@
             this.registrierungsdatumDateTimePicker.Name = "registrierungsdatumDateTimePicker";
             this.registrierungsdatumDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.registrierungsdatumDateTimePicker.TabIndex = 45;
-            // 
-            // sperrstatusLabel
-            // 
-            sperrstatusLabel.AutoSize = true;
-            sperrstatusLabel.Location = new System.Drawing.Point(443, 474);
-            sperrstatusLabel.Name = "sperrstatusLabel";
-            sperrstatusLabel.Size = new System.Drawing.Size(63, 13);
-            sperrstatusLabel.TabIndex = 46;
-            sperrstatusLabel.Text = "Sperrstatus:";
             // 
             // sperrstatusCheckBox
             // 
@@ -768,15 +787,6 @@
             this.sperrstatusCheckBox.Text = "checkBox1";
             this.sperrstatusCheckBox.UseVisualStyleBackColor = true;
             // 
-            // vIPLabel
-            // 
-            vIPLabel.AutoSize = true;
-            vIPLabel.Location = new System.Drawing.Point(443, 504);
-            vIPLabel.Name = "vIPLabel";
-            vIPLabel.Size = new System.Drawing.Size(27, 13);
-            vIPLabel.TabIndex = 48;
-            vIPLabel.Text = "VIP:";
-            // 
             // vIPCheckBox
             // 
             this.vIPCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.casino_gastBindingSource, "VIP", true));
@@ -787,15 +797,6 @@
             this.vIPCheckBox.Text = "checkBox1";
             this.vIPCheckBox.UseVisualStyleBackColor = true;
             // 
-            // vornameLabel1
-            // 
-            vornameLabel1.AutoSize = true;
-            vornameLabel1.Location = new System.Drawing.Point(443, 532);
-            vornameLabel1.Name = "vornameLabel1";
-            vornameLabel1.Size = new System.Drawing.Size(52, 13);
-            vornameLabel1.TabIndex = 50;
-            vornameLabel1.Text = "Vorname:";
-            // 
             // vornameTextBox1
             // 
             this.vornameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_gastBindingSource, "Vorname", true));
@@ -804,11 +805,22 @@
             this.vornameTextBox1.Size = new System.Drawing.Size(200, 20);
             this.vornameTextBox1.TabIndex = 51;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(976, 379);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Löschen";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Sicherheit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 997);
+            this.Controls.Add(this.button1);
             this.Controls.Add(adresseLabel1);
             this.Controls.Add(this.adresseTextBox1);
             this.Controls.Add(ausweisnummerLabel);
@@ -931,5 +943,6 @@
         private System.Windows.Forms.CheckBox sperrstatusCheckBox;
         private System.Windows.Forms.CheckBox vIPCheckBox;
         private System.Windows.Forms.TextBox vornameTextBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
