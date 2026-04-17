@@ -18,5 +18,24 @@ namespace DBProjekt
             InitializeComponent();
             casino_sicherheitsvorfallBindingSource.DataSource = daten.casino_sicherheitsvorfall.ToList();
         }
+
+        private void casino_sicherheitsvorfallDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var current = casino_sicherheitsvorfallBindingSource?.Current as casino_sicherheitsvorfall;
+            var query = daten.casino_sicherheitsvorfall
+           .Where(al => al.FK_Gast == current.FK_Gast)
+           .Select(al => al.casino_gast)
+           .Distinct()
+           .ToList();
+
+            var query2 = daten.casino_sicherheitsvorfall
+                .Where(ao => ao.FK_Mitarbeiter == current.FK_Mitarbeiter)
+                .Select(ao => ao.casino_mitarbeiter)
+                .Distinct()
+                .ToList();
+
+            casino_gastBindingSource.DataSource = query;
+            casino_mitarbeiterBindingSource.DataSource = query2;
+        }
     }
 }

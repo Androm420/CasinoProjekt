@@ -36,9 +36,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.Spiele = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.casino_gastBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.casino_gastBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.casino_gastBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,10 +117,6 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // casino_gastBindingSource
-            // 
-            this.casino_gastBindingSource.DataSource = typeof(DBProjekt.casino_gast);
-            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(12, 309);
@@ -137,9 +133,13 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 28;
-            this.button7.Text = "button7";
+            this.button7.Text = "Sicherheit";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // casino_gastBindingSource
+            // 
+            this.casino_gastBindingSource.DataSource = typeof(DBProjekt.casino_gast);
             // 
             // Form1
             // 

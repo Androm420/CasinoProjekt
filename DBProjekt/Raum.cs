@@ -20,12 +20,7 @@ namespace DBProjekt
             InitializeComponent();
             casino_raeumeBindingSource.DataSource = casinodata.casino_raeume.ToList();
             casino_spielBindingSource.DataSource = casinodata.casino_spiel.ToList();
-
-        }
-
-        private void Raum_Load(object sender, EventArgs e)
-        {
-
+            casino_mitarbeiterBindingSource.DataSource = casinodata.casino_mitarbeiter.ToList();
         }
 
         private void casino_spielDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -33,6 +28,13 @@ namespace DBProjekt
 
             var aktuell = casino_spielBindingSource?.Current as casino_spiel;
             casino_raeumeBindingSource.DataSource = aktuell.casino_raeume;
+        }
+
+        private void casino_raeumeBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            var current_raum = casino_raeumeBindingSource?.Current as casino_raeume;
+            var query = casinodata.casino_raeume.SelectMany(al => al.casino_mitarbeiter.Where(als => als.FK_Raum == current_raum.PK_Raum)).ToList();
+            casino_mitarbeiterBindingSource.DataSource = query;
         }
     }
 }
