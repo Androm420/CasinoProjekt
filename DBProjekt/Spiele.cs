@@ -29,6 +29,7 @@ namespace DBProjekt
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Spiel Hinzufugen
             var current = casino_spielBindingSource.Current as casino_spiel;
             current.FK_Raum = (int)comboBox1.SelectedValue;
             casino_spielBindingSource.EndEdit();
@@ -39,12 +40,14 @@ namespace DBProjekt
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //Editieren
             casino_spielBindingSource.EndEdit();
             daten.SaveChanges();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Löschen
             var current_gast = casino_spielBindingSource.Current as casino_spiel;
             var confirm_msg = MessageBox.Show("Spiel: " + current_gast.Bezeichnung+ " Löschen?", "Wirklich Löschen?", MessageBoxButtons.YesNo);
             if (confirm_msg == DialogResult.Yes)

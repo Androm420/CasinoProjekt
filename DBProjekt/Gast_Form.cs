@@ -52,6 +52,7 @@ namespace DBProjekt
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            //Suche nach ausweis
             var query = CasinoDaten.casino_gast.Where(a => a.Ausweisnummer.Contains(textBox1.Text)).Select(al => al).ToList();
             casino_gastBindingSource.DataSource = query;
         }
@@ -64,6 +65,7 @@ namespace DBProjekt
 
         private void casino_gastBindingSource_CurrentChanged(object sender, EventArgs e)
         {
+            //Query JOIN Gast und Transaktion
             var current_gast = casino_gastBindingSource.Current as casino_gast;
 
             var query = CasinoDaten.casino_gast.SelectMany(al => al.casino_transaktion.Where(als => als.casino_gast.PK_Gast == current_gast.PK_Gast)).ToList();

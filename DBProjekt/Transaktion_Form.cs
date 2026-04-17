@@ -23,11 +23,14 @@ namespace DBProjekt
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Editieren
+            casino_transaktionBindingSource.EndEdit();
             CasinoDaten.SaveChanges();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //Hinzufugen
             var current = casino_transaktionBindingSource.Current as casino_transaktion;
             CasinoDaten.casino_transaktion.Add(current);
             casino_transaktionBindingSource.EndEdit();
@@ -36,6 +39,7 @@ namespace DBProjekt
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Löschen
             var current_gast = casino_transaktionBindingSource.Current as casino_transaktion;
             var confirm_msg = MessageBox.Show("Transaktion: " + current_gast.PK_Transaktion+ " Löschen?", "Wirklich Löschen?", MessageBoxButtons.YesNo);
             if (confirm_msg == DialogResult.Yes)
