@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Raum));
             System.Windows.Forms.Label pK_RaumLabel;
             System.Windows.Forms.Label raumbezeichnungLabel;
-            this.casino_raeumeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.casino_raeumeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,16 +47,25 @@
             this.casino_raeumeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.pK_RaumTextBox = new System.Windows.Forms.TextBox();
             this.raumbezeichnungTextBox = new System.Windows.Forms.TextBox();
+            this.casino_spielDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.casino_spielBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.casino_raeumeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             pK_RaumLabel = new System.Windows.Forms.Label();
             raumbezeichnungLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingNavigator)).BeginInit();
             this.casino_raeumeBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_spielDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_spielBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // casino_raeumeBindingSource
-            // 
-            this.casino_raeumeBindingSource.DataSource = typeof(DBProjekt.casino_raeume);
             // 
             // casino_raeumeBindingNavigator
             // 
@@ -85,7 +93,7 @@
             this.casino_raeumeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.casino_raeumeBindingNavigator.Name = "casino_raeumeBindingNavigator";
             this.casino_raeumeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.casino_raeumeBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.casino_raeumeBindingNavigator.Size = new System.Drawing.Size(882, 25);
             this.casino_raeumeBindingNavigator.TabIndex = 0;
             this.casino_raeumeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -218,11 +226,88 @@
             this.raumbezeichnungTextBox.Size = new System.Drawing.Size(100, 20);
             this.raumbezeichnungTextBox.TabIndex = 4;
             // 
+            // casino_spielDataGridView
+            // 
+            this.casino_spielDataGridView.AutoGenerateColumns = false;
+            this.casino_spielDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.casino_spielDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.casino_spielDataGridView.DataSource = this.casino_spielBindingSource;
+            this.casino_spielDataGridView.Location = new System.Drawing.Point(12, 263);
+            this.casino_spielDataGridView.Name = "casino_spielDataGridView";
+            this.casino_spielDataGridView.Size = new System.Drawing.Size(834, 220);
+            this.casino_spielDataGridView.TabIndex = 5;
+            this.casino_spielDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.casino_spielDataGridView_CellClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Spiel";
+            this.dataGridViewTextBoxColumn1.HeaderText = "PK_Spiel";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Bezeichnung";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Bezeichnung";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "MinEinsatz";
+            this.dataGridViewTextBoxColumn3.HeaderText = "MinEinsatz";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "MaxEinsatz";
+            this.dataGridViewTextBoxColumn4.HeaderText = "MaxEinsatz";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "LetzteWartung";
+            this.dataGridViewTextBoxColumn5.HeaderText = "LetzteWartung";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Status";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "FK_Raum";
+            this.dataGridViewTextBoxColumn7.HeaderText = "FK_Raum";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "casino_raeume";
+            this.dataGridViewTextBoxColumn8.HeaderText = "casino_raeume";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // casino_spielBindingSource
+            // 
+            this.casino_spielBindingSource.DataSource = typeof(DBProjekt.casino_spiel);
+            // 
+            // casino_raeumeBindingSource
+            // 
+            this.casino_raeumeBindingSource.DataSource = typeof(DBProjekt.casino_raeume);
+            // 
             // Raum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(882, 505);
+            this.Controls.Add(this.casino_spielDataGridView);
             this.Controls.Add(pK_RaumLabel);
             this.Controls.Add(this.pK_RaumTextBox);
             this.Controls.Add(raumbezeichnungLabel);
@@ -231,10 +316,12 @@
             this.Name = "Raum";
             this.Text = "Raum";
             this.Load += new System.EventHandler(this.Raum_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingNavigator)).EndInit();
             this.casino_raeumeBindingNavigator.ResumeLayout(false);
             this.casino_raeumeBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_spielDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_spielBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +345,15 @@
         private System.Windows.Forms.ToolStripButton casino_raeumeBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox pK_RaumTextBox;
         private System.Windows.Forms.TextBox raumbezeichnungTextBox;
+        private System.Windows.Forms.BindingSource casino_spielBindingSource;
+        private System.Windows.Forms.DataGridView casino_spielDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBProjekt
 {
@@ -18,12 +19,20 @@ namespace DBProjekt
         {
             InitializeComponent();
             casino_raeumeBindingSource.DataSource = casinodata.casino_raeume.ToList();
+            casino_spielBindingSource.DataSource = casinodata.casino_spiel.ToList();
 
         }
 
         private void Raum_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void casino_spielDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            var aktuell = casino_spielBindingSource?.Current as casino_spiel;
+            casino_raeumeBindingSource.DataSource = aktuell.casino_raeume;
         }
     }
 }
