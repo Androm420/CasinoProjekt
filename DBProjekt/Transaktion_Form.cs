@@ -25,5 +25,13 @@ namespace DBProjekt
         {
             CasinoDaten.SaveChanges();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var current = casino_transaktionBindingSource.Current as casino_transaktion;
+            CasinoDaten.casino_transaktion.Add(current);
+            casino_transaktionBindingSource.EndEdit();
+            CasinoDaten.SaveChanges();
+        }
     }
 }

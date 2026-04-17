@@ -18,10 +18,9 @@ namespace DBProjekt
         {
             InitializeComponent();
             casino_gastBindingSource.DataSource = CasinoDaten.casino_gast.ToList();
-            
                     sperrstatusCheckBox.Text = "Gesperrt";
                     vIPCheckBox.Text = "VIP";
-            
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,6 +62,14 @@ namespace DBProjekt
         {
             var query = CasinoDaten.casino_gast.Where(a => a.Geburtsdatum == dateTimePicker1.Value).ToList();
             casino_gastBindingSource.DataSource = query;
+        }
+
+        private void casino_gastBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            var current_gast = casino_gastBindingSource.Current as casino_gast;
+
+            var query = CasinoDaten.casino_gast.SelectMany(al => al.casino_transaktion.Where(als => als.casino_gast.PK_Gast == current_gast.PK_Gast)).ToList();
+            casino_transaktionBindingSource.DataSource = query;
         }
     }
 }

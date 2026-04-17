@@ -62,5 +62,11 @@ namespace DBProjekt
             Raum form = new Raum();
             form.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Sicherheit form = new Sicherheit();
+            form.Show();
+        }
     }
 }
