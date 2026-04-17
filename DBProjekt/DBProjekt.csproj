@@ -120,6 +120,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raum.Designer.cs">
+      <DependentUpon>Raum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rollen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Raum.resx">
+      <DependentUpon>Raum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Rollen.resx">
       <DependentUpon>Rollen.cs</DependentUpon>
     </EmbeddedResource>

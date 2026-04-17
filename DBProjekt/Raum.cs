@@ -10,13 +10,19 @@ using System.Windows.Forms;
 
 namespace DBProjekt
 {
-    public partial class Raume_Form : Form
+    public partial class Raum : Form
     {
-        g5_6it23Entities1 Casinodaten = new g5_6it23Entities1();
-        public Raume_Form()
+
+        g5_6it23Entities1 casinodata = new g5_6it23Entities1();
+        public Raum()
         {
             InitializeComponent();
-            casino_raeumeBindingSource.DataSource = Casinodaten.casino_raeume.ToList();
+            casino_raeumeBindingSource.DataSource = casinodata.casino_raeume.ToList();
+
+        }
+
+        private void Raum_Load(object sender, EventArgs e)
+        {
 
         }
     }

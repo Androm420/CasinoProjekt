@@ -1,6 +1,6 @@
 ﻿namespace DBProjekt
 {
-    partial class Raume_Form
+    partial class Raum
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Raume_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Raum));
             System.Windows.Forms.Label pK_RaumLabel;
             System.Windows.Forms.Label raumbezeichnungLabel;
+            this.casino_raeumeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.casino_raeumeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -47,13 +48,16 @@
             this.casino_raeumeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.pK_RaumTextBox = new System.Windows.Forms.TextBox();
             this.raumbezeichnungTextBox = new System.Windows.Forms.TextBox();
-            this.casino_raeumeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             pK_RaumLabel = new System.Windows.Forms.Label();
             raumbezeichnungLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingNavigator)).BeginInit();
             this.casino_raeumeBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // casino_raeumeBindingSource
+            // 
+            this.casino_raeumeBindingSource.DataSource = typeof(DBProjekt.casino_raeume);
             // 
             // casino_raeumeBindingNavigator
             // 
@@ -183,7 +187,7 @@
             // pK_RaumLabel
             // 
             pK_RaumLabel.AutoSize = true;
-            pK_RaumLabel.Location = new System.Drawing.Point(166, 160);
+            pK_RaumLabel.Location = new System.Drawing.Point(382, 142);
             pK_RaumLabel.Name = "pK_RaumLabel";
             pK_RaumLabel.Size = new System.Drawing.Size(55, 13);
             pK_RaumLabel.TabIndex = 1;
@@ -192,7 +196,7 @@
             // pK_RaumTextBox
             // 
             this.pK_RaumTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_raeumeBindingSource, "PK_Raum", true));
-            this.pK_RaumTextBox.Location = new System.Drawing.Point(271, 157);
+            this.pK_RaumTextBox.Location = new System.Drawing.Point(487, 139);
             this.pK_RaumTextBox.Name = "pK_RaumTextBox";
             this.pK_RaumTextBox.Size = new System.Drawing.Size(100, 20);
             this.pK_RaumTextBox.TabIndex = 2;
@@ -200,7 +204,7 @@
             // raumbezeichnungLabel
             // 
             raumbezeichnungLabel.AutoSize = true;
-            raumbezeichnungLabel.Location = new System.Drawing.Point(166, 186);
+            raumbezeichnungLabel.Location = new System.Drawing.Point(382, 168);
             raumbezeichnungLabel.Name = "raumbezeichnungLabel";
             raumbezeichnungLabel.Size = new System.Drawing.Size(99, 13);
             raumbezeichnungLabel.TabIndex = 3;
@@ -209,16 +213,12 @@
             // raumbezeichnungTextBox
             // 
             this.raumbezeichnungTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casino_raeumeBindingSource, "Raumbezeichnung", true));
-            this.raumbezeichnungTextBox.Location = new System.Drawing.Point(271, 183);
+            this.raumbezeichnungTextBox.Location = new System.Drawing.Point(487, 165);
             this.raumbezeichnungTextBox.Name = "raumbezeichnungTextBox";
             this.raumbezeichnungTextBox.Size = new System.Drawing.Size(100, 20);
             this.raumbezeichnungTextBox.TabIndex = 4;
             // 
-            // casino_raeumeBindingSource
-            // 
-            this.casino_raeumeBindingSource.DataSource = typeof(DBProjekt.casino_raeume);
-            // 
-            // Raume_Form
+            // Raum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,12 +228,13 @@
             this.Controls.Add(raumbezeichnungLabel);
             this.Controls.Add(this.raumbezeichnungTextBox);
             this.Controls.Add(this.casino_raeumeBindingNavigator);
-            this.Name = "Raume_Form";
-            this.Text = "Raume_Form";
+            this.Name = "Raum";
+            this.Text = "Raum";
+            this.Load += new System.EventHandler(this.Raum_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingNavigator)).EndInit();
             this.casino_raeumeBindingNavigator.ResumeLayout(false);
             this.casino_raeumeBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.casino_raeumeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

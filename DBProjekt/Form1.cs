@@ -56,5 +56,11 @@ namespace DBProjekt
             Rollen form = new Rollen();
             form.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Raum form = new Raum();
+            form.Show();
+        }
     }
 }
